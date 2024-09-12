@@ -1,0 +1,19 @@
+.page {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100%;
+
+  &--lock {
+    overflow: hidden;
+  }
+}
+
+.page__main {
+  flex-grow: 1;
+}
