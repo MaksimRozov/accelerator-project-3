@@ -1,0 +1,71 @@
+.hero__header {
+  position: absolute;
+  padding-top: 20px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__slider {
+  position: relative;
+}
+
+.hero__carousel {
+  position: relative;
+}
+
+.hero__carousel .hero__pagination {
+  position: relative;
+  left: 0;
+  top: 36%;
+  bottom: auto;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-radius: 12px 12px 0 0;
+  padding: 10px 16px;
+  width: 80px;
+  height: 28px;
+  background-color: $white-color;
+  display: none;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-image: url("../../__spritemap#sprite-angle-bottom-view");
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -9px;
+    bottom: 0;
+  }
+}
+
+.hero__pagination-container > .hero__pagination {
+  display: flex;
+}
+
+.hero__dots {
+  border-radius: 50%;
+  border: none;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../../__spritemap#sprite-dot-default-view");
+  cursor: pointer;
+
+  &--active {
+    background-image: url("../../__spritemap#sprite-dot-active-view");
+  }
+
+  &:hover {
+    background-image: url("../../__spritemap#sprite-dot-hover-view");
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-image: url("../../__spritemap#sprite-dot-focus-view");
+  }
+}

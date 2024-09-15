@@ -18,6 +18,160 @@
 
 <body class="page__body">
   <header class="hero" data-test="hero">
+    <div class="hero__header container">
+      <div class="hero__header-logo logo">
+        <svg width="30" height="30" role="img" aria-label="Логотип кампании.">
+          <use href="/__spritemap#sprite-logo"></use>
+        </svg>
+      </div>
+      <nav class="hero__header-menu menu">
+        <div class="menu__header">
+          <div class="menu__title">Меню</div>
+          <button class="menu__burger" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <ul class="menu__list">
+          <li>
+            <a class="menu__link" href="#about">О проекте</a>
+          </li>
+          <li>
+            <a class="menu__link" href="#programs">Программы</a>
+            <ul class="menu__dropdawn">
+              <li>
+                <a class="menu__dropdawn-link" href="#">Стажировки</a>
+              </li>
+              <li>
+                <a class="menu__dropdawn-link" href="#">Волонтёрство</a>
+              </li>
+              <li>
+                <a class="menu__dropdawn-link" href="#">Учёба</a>
+              </li>
+              <li>
+                <a class="menu__dropdawn-link" href="#">Религия</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="menu__link" href="#how-go">Как поехать</a>
+          </li>
+          <li>
+            <a class="menu__link" href="#review">Отзывы</a>
+          </li>
+          <li>
+            <a class="menu__link" href="#news">Новости</a>
+            <ul class="menu__dropdawn">
+              <li>
+                <a class="menu__dropdawn-link" href="#">Стажировки</a>
+              </li>
+              <li>
+                <a class="menu__dropdawn-link" href="#">Волонтёрство</a>
+              </li>
+              <li>
+                <a class="menu__dropdawn-link" href="#">Карьера</a>
+              </li>
+              <li>
+                <a class="menu__dropdawn-link" href="#">Путешествия</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="menu__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="hero__carousel">
+      <div class="hero__slider swiper container">
+        <div class="hero__slider-wrapper swiper-wrapper">
+          <div class="hero__slider-item swiper-slide">
+            <div class="card-hero">
+              <div class="card-hero__image">
+                <picture>
+                  <source media="(min-width: 1440px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop@1x.webp 1x, img/hero/hero-desktop@2x.webp 2x">
+                  <source media="(min-width: 1440px)" type="image/jpeg" width="1440" height="800" srcset="img/hero/hero-desktop@1x.jpg 1x, img/hero/hero-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet@1x.webp 1x, img/hero/hero-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" type="image/jpeg" width="768" height="1024" srcset="img/hero/hero-tablet@1x.jpg 1x, img/hero/hero-tablet@2x.jpg 2x">
+                  <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile@1x.webp 1x, img/hero/hero-mobile@2x.webp 2x">
+                  <img width="320" height="568" src="img/hero/hero-mobile@1x.jpg" loading="lazy" srcset="img/hero/hero-mobile@2x.jpg 2x" alt="Девушка в очках в желтой рубашке, в руках держит документы.">
+                </picture>
+              </div>
+              <div class="card-hero__content">
+                <div class="hero__pagination-container">
+                </div>
+
+                <div class="card-hero__content-one">
+                  <h2 class="card-hero__content-title">Глобальный профессиональный опыт обучения за&nbsp;рубежом</h2>
+                </div>
+                <div class="card-hero__content-two">
+                  <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
+                </div>
+                <div class="card-hero__content-three">
+                  <a class="hero__button button" href="#">подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slider-item swiper-slide">
+            <div class="card-hero">
+              <div class="card-hero__image">
+                <picture>
+                  <source media="(min-width: 1440px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero2-desktop@1x.webp 1x, img/hero/hero2-desktop@2x.webp 2x">
+                  <source media="(min-width: 1440px)" type="image/jpeg" width="1440" height="800" srcset="img/hero/hero2-desktop@1x.jpg 1x, img/hero/hero2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero2-tablet@1x.webp 1x, img/hero/hero2-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" type="image/jpeg" width="768" height="1024" srcset="img/hero/hero2-tablet@1x.jpg 1x, img/hero/hero2-tablet@2x.jpg 2x">
+                  <source type="image/webp" width="320" height="568" srcset="img/hero/hero2-mobile@1x.webp 1x, img/hero/hero2-mobile@2x.webp 2x">
+                  <img width="320" height="568" src="img/hero/hero2-mobile@1x.jpg" loading="lazy" srcset="img/hero/hero2-mobile@2x.jpg 2x" alt="Девушка в очках в желтой рубашке, в руках держит документы.">
+                </picture>
+              </div>
+              <div class="card-hero__content">
+                <div class="hero__pagination-container">
+                </div>
+                <div class="card-hero__content-one">
+                  <h2 class="card-hero__content-title">Волонтёрские программы — внесите свой вклад в общество</h2>
+                </div>
+                <div class="card-hero__content-two">
+                  <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+                </div>
+                <div class="card-hero__content-three">
+                  <a class="hero__button button" href="#">подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slider-item swiper-slide">
+            <div class="card-hero">
+              <div class="card-hero__image">
+                <picture>
+                  <source media="(min-width: 1440px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero3-desktop@1x.webp 1x, img/hero/hero3-desktop@2x.webp 2x">
+                  <source media="(min-width: 1440px)" type="image/jpeg" width="1440" height="800" srcset="img/hero/hero3-desktop@1x.jpg 1x, img/hero/hero3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero3-tablet@1x.webp 1x, img/hero/hero3-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" type="image/jpeg" width="768" height="1024" srcset="img/hero/hero3-tablet@1x.jpg 1x, img/hero/hero3-tablet@2x.jpg 2x">
+                  <source type="image/webp" width="320" height="568" srcset="img/hero/hero3-mobile@1x.webp 1x, img/hero/hero3-mobile@2x.webp 2x">
+                  <img width="320" height="568" src="img/hero/hero3-mobile@1x.jpg" loading="lazy" srcset="img/hero/hero3-mobile@2x.jpg 2x" alt="Девушка в очках в желтой рубашке, в руках держит документы.">
+                </picture>
+              </div>
+              <div class="card-hero__content">
+                <div class="hero__pagination-container">
+                </div>
+                <div class="card-hero__content-one">
+                  <h2 class="card-hero__content-title">Программы стажировок в крупнейших компаниях мира</h2>
+                </div>
+                <div class="card-hero__content-two">
+                  <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+                </div>
+                <div class="card-hero__content-three">
+                  <a class="hero__button button" href="#">подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__pagination swiper-pagination"></div>
+
+      </div>
+    </div>
 
   </header>
 

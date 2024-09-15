@@ -1,0 +1,39 @@
+.button {
+  border: 1px solid $primary-color;
+  border-radius: 30px;
+  padding: 5px 5px 5px 21px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $primary-color;
+  position: relative;
+  min-height: 44px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    right: 5px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 18px;
+    mask-image: url("../../__spritemap#sprite-arrow-right-top-view");
+    background-color: #ffffff;
+    width: 8px;
+    height: 8px;
+    z-index: 1;
+  }
+}

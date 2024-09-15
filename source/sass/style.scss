@@ -2,6 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/pagination";
 
 // GLOBAL
 
@@ -12,3 +13,11 @@
 @import "global/fonts";
 @import "global/mixin";
 @import "global/container";
+
+// BLOCKS
+
+@import "blocks/hero";
+@import "blocks/card-hero";
+@import "blocks/menu";
+@import "blocks/button";
+@import "blocks/logo";

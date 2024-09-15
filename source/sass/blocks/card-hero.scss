@@ -1,0 +1,88 @@
+.card-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 568px;
+  justify-content: end;
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: $text-color;
+    margin: 0;
+  }
+}
+
+.card-hero__image {
+  position: absolute;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card-hero__content {
+  position: relative;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding: 0 15px;
+}
+
+.card-hero__content-one {
+  border-radius: 0 16px 16px 0;
+  padding: 20px 14px 16px;
+  background-color: $white-color;
+  width: 290px;
+  min-height: 140px;
+}
+
+.card-hero__content-two {
+  border-radius: 0 0 14px;
+  padding: 0 14px 15px;
+  width: 267px;
+  min-height: 115px;
+  background-color: $white-color;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 0;
+    width: 8px;
+    height: 10px;
+    background-image: url("../../__spritemap#sprite-angle-view");
+    background-repeat: no-repeat;
+  }
+}
+
+.card-hero__content-three {
+  border-radius: 0 0 14px 14px;
+  padding: 10px 15px;
+  width: 184px;
+  min-height: 64px;
+  background-color: $white-color;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 0;
+    width: 8px;
+    height: 10px;
+    background-image: url("../../__spritemap#sprite-angle-view");
+    background-repeat: no-repeat;
+  }
+}
+
+.card-hero__content-title {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 118%;
+  color: $primary-color;
+  margin: 0;
+}
