@@ -13,12 +13,11 @@ const sliderHero = () => {
 
       modules: [Pagination, EffectFade],
       effect: 'fade',
-      crossFade: 'false',
+      crossFade: 'true',
       slidesPerView: 1,
       watchOverflow: true,
-      speed: 500,
+      speed: 300,
       loop: true,
-      // allowTouchMove: false,
       pagination: {
         el: '.hero__pagination',
         bulletClass: 'hero__dots',
@@ -91,6 +90,12 @@ const sliderHero = () => {
       setPaginationPosition(activeIndex);
       updateActiveButton(activeIndex);
     });
+    swiperHero.on('slideChangeTransitionStart', () => {
+      const activeIndex = swiperHero.activeIndex;
+      setPaginationPosition(activeIndex);
+      updateActiveButton(activeIndex);
+    });
+
 
     // Инициализация активной кнопки при загрузке
     updateActiveButton(swiperHero.activeIndex);

@@ -1,5 +1,89 @@
+.menu {
+  position: absolute;
+  right: 15px;
+  top: 19px;
+  transition: 0.3s;
+}
+
 .menu__list {
+  @include list-style-none;
+
+  width: 100%;
+  background-color: $primary-color;
   display: none;
+  border-radius: 16px;
+  padding: 35px 25px;
+  min-height: 398px;
+
+  &--open {
+    display: block;
+  }
+}
+
+.menu__dropdown {
+  @include list-style-none;
+
+  padding-left: 16px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.menu__link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $white-color;
+  opacity: 0.7;
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+.menu__link--dropdown {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 8px;
+    width: 12px;
+    height: 7px;
+    background-image: url("../../__spritemap#sprite-arrow-down-view");
+  }
+}
+
+.menu__link--dropdown.menu__link--open {
+  &::after {
+    width: 12px;
+    height: 7px;
+    background-image: url("../../__spritemap#sprite-arrow-up-view");
+    background-size: 12px;
+    top: 6px;
+  }
+}
+
+.menu__item:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.menu__dropdown-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: $white-color;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.menu__dropdown-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.menu__dropdown-item:first-child {
+  margin-top: 20px;
 }
 
 .menu__header {
@@ -19,6 +103,15 @@
   color: $primary-color;
   width: 136px;
   height: 54px;
+  transition: 0.3s;
+  margin-bottom: 4px;
+
+  &--open {
+    width: 290px;
+    transition: 0.3s;
+    background-color: $primary-color;
+    color: $white-color;
+  }
 }
 
 .menu__burger {
@@ -31,4 +124,10 @@
   background-size: 24px 27px;
   background-repeat: no-repeat;
   background-position: center center;
+
+  &--open {
+    background-color: $white-color;
+    background-image: url("../../__spritemap#sprite-menu-open-view");
+    background-size: 16px;
+  }
 }
