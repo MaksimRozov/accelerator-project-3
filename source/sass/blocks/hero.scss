@@ -16,18 +16,19 @@
 }
 
 .hero__carousel .hero__pagination {
-  position: relative;
-  left: 0;
-  top: 36%;
-  bottom: auto;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
+  display: none;
+}
+
+.hero__pagination-container {
   border-radius: 12px 12px 0 0;
   padding: 10px 16px;
   width: 80px;
   height: 28px;
   background-color: $white-color;
-  display: none;
+  position: relative;
 
   &::after {
     content: "";

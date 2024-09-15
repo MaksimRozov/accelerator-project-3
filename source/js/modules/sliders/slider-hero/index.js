@@ -44,44 +44,34 @@ const sliderHero = () => {
 
     });
 
+
+    const paginationButtons = document.querySelectorAll('.hero__dots');
+    const panelControl = document.querySelector('.hero__pagination');
+    // const blockContents = document.querySelectorAll('.swiper-slide'); // Замените на ваш селектор слайдов
+
     const updateActiveButton = (activeIndex) => {
-
-      const paginationButtons = document.querySelectorAll('.hero__dots');
-
-
-      // Удаляем класс активной кнопки у всех кнопок
-      paginationButtons.forEach((btn) => btn.classList.remove('hero__dots--active'));
-
-      // Добавляем класс активной кнопке
-      paginationButtons[activeIndex].classList.add('hero__dots--active');
+      paginationButtons.forEach((btn, index) => {
+        btn.classList.toggle('hero__dots--active', index === activeIndex);
+      });
     };
 
-
     const setPaginationPosition = (activeIndex) => {
-      const panelControl = document.querySelector('.hero__pagination');
-      const activeElement = blockContents[activeIndex]; // Получаем активный элемент
+      const activeElement = blockContents[activeIndex];
 
-      // Убеждаемся, что активный элемент существует
       if (activeElement) {
         const panelControlContainer = activeElement.querySelector('.hero__pagination-container');
+        panelControlContainer.innerHTML = ''; // Очищаем контейнер
 
-        // Очищаем контейнер перед добавлением нового содержимого
-        panelControlContainer.innerHTML = '';
-
-        // Клонируем и добавляем элемент только в активный контейнер
         const panelClone = panelControl.cloneNode(true);
         panelControlContainer.append(panelClone);
 
-        // Добавление обработчиков событий для кнопок пагинации
-        const paginationButtons = panelControlContainer.querySelectorAll('.hero__dots');
-
-        paginationButtons.forEach((button, index) => {
-          button.addEventListener('click', () => {
-            swiperHero.slideTo(index); // Переход на соответствующий слайд
-
-            updateActiveButton(activeIndex);
-
-          });
+        // Устанавливаем обработчики событий для кнопок пагинации
+        const newPaginationButtons = panelClone.querySelectorAll('.hero__dots');
+        newPaginationButtons.forEach((button, index) => {
+          button.onclick = () => {
+            swiperHero.slideTo(index);
+            updateActiveButton(index);
+          };
         });
       }
     };
@@ -90,30 +80,20 @@ const sliderHero = () => {
     setPaginationPosition(swiperHero.activeIndex);
 
     // Обработчик события для изменения слайда
-    swiperHero.on('slideChangeTransitionEnd', () => {
-      setPaginationPosition(swiperHero.activeIndex);
-      updateActiveButton(swiperHero.activeIndex);
-
-    });
-
-    // Обработчик события для клика на пагинацию
-    swiperHero.on('paginationClick', () => {
-      setPaginationPosition(swiperHero.activeIndex);
-      updateActiveButton(swiperHero.activeIndex);
-
-    });
-
-    // Обработчик события для клика на пагинацию
     swiperHero.on('slideChange', () => {
-      setPaginationPosition(swiperHero.activeIndex);
-      updateActiveButton(swiperHero.activeIndex);
-
+      const activeIndex = swiperHero.activeIndex;
+      setPaginationPosition(activeIndex);
+      updateActiveButton(activeIndex);
     });
 
-    // swiperHero.on('activeIndexChange', () => {
-    //   setPaginationPosition(swiperHero.activeIndex);
-    //   updateActiveButton(swiperHero.activeIndex);
-    // });
+    swiperHero.on('slideChangeTransitionEnd', () => {
+      const activeIndex = swiperHero.activeIndex;
+      setPaginationPosition(activeIndex);
+      updateActiveButton(activeIndex);
+    });
+
+    // Инициализация активной кнопки при загрузке
+    updateActiveButton(swiperHero.activeIndex);
 
 
   }
