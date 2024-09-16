@@ -45,6 +45,10 @@ const sliderHero = () => {
 
 
     const paginationButtons = document.querySelectorAll('.hero__dots');
+
+    paginationButtons.forEach((button, index) => {
+      button.innerHTML = `<span class="visually-hidden">Переход на слайдер номер ${index + 1}</span>`;
+    });
     const panelControl = document.querySelector('.hero__pagination');
     // const blockContents = document.querySelectorAll('.swiper-slide'); // Замените на ваш селектор слайдов
 

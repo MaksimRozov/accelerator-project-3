@@ -37,7 +37,7 @@ const onToggleMenu = () => {
 
 
 const initMenu = () => {
-  buttonBurger.addEventListener('click', onToggleMenu);
+  menuHeader.addEventListener('click', onToggleMenu);
 };
 
 document.querySelectorAll('.menu__link--dropdown').forEach((item) => {
