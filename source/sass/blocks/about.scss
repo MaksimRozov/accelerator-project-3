@@ -1,0 +1,26 @@
+.about__title > p {
+  font-size: 16px;
+}
+
+.about {
+  h3 {
+    font-size: 18px;
+    line-height: 122%;
+    color: $primary-color;
+  }
+}
+
+.about__list {
+  @include list-style-none;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  border-radius: 20px;
+  padding: 20px 20px 40px;
+  background-color: $primary-color;
+}
+
+.about__button {
+  max-width: 223px;
+}

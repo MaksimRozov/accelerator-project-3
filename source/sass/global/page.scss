@@ -9,6 +9,11 @@
   min-width: 320px;
   min-height: 100%;
   font-family: $primary-font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: $text-color;
+  background-color: $beige-color;
 
   &--lock {
     overflow: hidden;

@@ -1,0 +1,36 @@
+.card {
+  color: $white-color;
+  padding: 16px 21px;
+  border: 1px solid $beige-color;
+  border-radius: 16px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../__spritemap#sprite-star-view");
+    width: 42px;
+    height: 42px;
+    left: -20px;
+    top: -19px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    background-size: 18px 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.card p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 143%;
+  color: $beige-color;
+
+  span {
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+}

@@ -23,7 +23,7 @@ const sliderHero = () => {
         bulletClass: 'hero__dots',
         bulletActiveClass: 'hero__dots--active',
         clickable: true,
-        bulletElement: 'button type="button"',
+        bulletElement: 'button type="button" tabindex="0"',
       },
       breakpoints: {
         320: {
@@ -58,12 +58,73 @@ const sliderHero = () => {
       });
     };
 
+    // const setPaginationPosition = (activeIndex) => {
+    //   const activeElement = blockContents[activeIndex];
+
+    //   if (activeElement) {
+    //     const panelControlContainer = activeElement.querySelector('.hero__pagination-container');
+    //     panelControlContainer.innerHTML = ''; // Очищаем контейнер
+
+    //     const panelClone = panelControl.cloneNode(true);
+    //     panelControlContainer.append(panelClone);
+
+    //     // Устанавливаем обработчики событий для кнопок пагинации
+    //     const newPaginationButtons = panelClone.querySelectorAll('.hero__dots');
+    //     newPaginationButtons.forEach((button, index) => {
+    //       button.onclick = () => {
+    //         swiperHero.slideTo(index);
+    //         updateActiveButton(index);
+    //       };
+    //     });
+    //   }
+    // };
+
+
+    // Устанавливаем начальную позицию
+
+    // const setPaginationPosition = (activeIndex) => {
+    //   // Удаляем содержимое всех контейнеров пагинации
+    //   blockContents.forEach((content) => {
+    //     const panelControlContainer = content.querySelector('.hero__pagination-container');
+    //     if (panelControlContainer) {
+    //       panelControlContainer.innerHTML = ''; // Очищаем контейнер
+    //     }
+    //   });
+
+    //   const activeElement = blockContents[activeIndex];
+
+    //   if (activeElement) {
+    //     const panelControlContainer = activeElement.querySelector('.hero__pagination-container');
+
+    //     const panelClone = panelControl.cloneNode(true);
+    //     panelControlContainer.append(panelClone);
+
+    //     // Устанавливаем обработчики событий для кнопок пагинации
+    //     const newPaginationButtons = panelClone.querySelectorAll('.hero__dots');
+    //     newPaginationButtons.forEach((button, index) => {
+    //       button.onclick = () => {
+    //         swiperHero.slideTo(index);
+    //         updateActiveButton(index);
+    //       };
+    //     });
+    //   }
+    // };
+
+    let currentFocusButton = null;
+
     const setPaginationPosition = (activeIndex) => {
+      // Удаляем содержимое всех контейнеров пагинации
+      blockContents.forEach((content) => {
+        const panelControlContainer = content.querySelector('.hero__pagination-container');
+        if (panelControlContainer) {
+          panelControlContainer.innerHTML = ''; // Очищаем контейнер
+        }
+      });
+
       const activeElement = blockContents[activeIndex];
 
       if (activeElement) {
         const panelControlContainer = activeElement.querySelector('.hero__pagination-container');
-        panelControlContainer.innerHTML = ''; // Очищаем контейнер
 
         const panelClone = panelControl.cloneNode(true);
         panelControlContainer.append(panelClone);
@@ -72,14 +133,24 @@ const sliderHero = () => {
         const newPaginationButtons = panelClone.querySelectorAll('.hero__dots');
         newPaginationButtons.forEach((button, index) => {
           button.onclick = () => {
+            // Сохраняем текущую кнопку фокуса
+            currentFocusButton = button;
+
             swiperHero.slideTo(index);
             updateActiveButton(index);
+
+            // Сохраняем фокус на кнопке
+            setTimeout(() => {
+              if (currentFocusButton) {
+                currentFocusButton.focus();
+              }
+            }, 100); // Используем setTimeout для обеспечения правильного порядка выполнения
           };
         });
       }
     };
 
-    // Устанавливаем начальную позицию
+
     setPaginationPosition(swiperHero.activeIndex);
 
     // Обработчик события для изменения слайда
