@@ -169,7 +169,6 @@
       </div>
     </div>
   </header>
-
   <section class="about container" data-test="about">
     <div class="about__content">
       <div class="about__content-item">
@@ -277,9 +276,130 @@
         </div>
         <div class="programs__slider-pagination swiper-pagination"></div>
       </div>
-
     </div>
-
+    <a class="programs__button button button--light" href="#">Все программы</a>
+  </section>
+  <section class="grant" data-test="grant">
+    <div class="grant__wrapper container">
+      <div class="grant__item">
+        <h2 class="grant__title title">Как поехать</h2>
+        <p>Свяжитесь с координатором, чтобы узнать полную информацию. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p>
+        <div class="grant__image">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" width="498" height="363" srcset="img/grant/photo-desktop@1x.webp 1x, img/grant/photo-desktop@2x.webp 2x">
+            <source media="(min-width: 1440px)" type="image/jpeg" width="498" height="363" srcset="img/grant/photo-desktop@1x.jpg 1x, img/grant/photo-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" type="image/webp" width="638" height="375" srcset="img/grant/photo-tablet@1x.webp 1x, img/grant/photo-tablet@2x.webp 2x">
+            <source media="(min-width: 768px)" type="image/jpeg" width="638" height="375" srcset="img/grant/photo-tablet@1x.jpg 1x, img/grant/photo-tablet@2x.jpg 2x">
+            <source type="image/webp" width="290" height="200" srcset="img/grant/photo-mobile@1x.webp 1x, img/grant/photo-mobile@2x.webp 2x">
+            <img width="290" height="200" src="img/grant/photo-mobile@1x.jpg" loading="lazy" srcset="img/grant/photo-mobile@2x.jpg 2x" alt="Девушка в очках в желтой рубашке, в руках держит документы.">
+          </picture>
+        </div>
+      </div>
+      <div class="grant__item">
+        <div class="grant__heading">Чтобы получить грант на обучение, вам нужно:</div>
+        <ul class="grant__list">
+          <li class="card card--number">
+            <p>Быть в возрасте от 16 до 30 лет</p>
+          </li>
+          <li class="card card--number">
+            <p>Иметь оконченное среднее образование</p>
+          </li>
+          <li class="card card--number">
+            <p>Иметь документально подтверждённое отсутствие судимости и пройти консульскую проверку</p>
+          </li>
+          <li class="card card--number">
+            <p>За последние 2 года быть не больше 3х месяцев подряд непрерывно в одной стране</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="news" data-test="news">
+    <h2 class="news__title title">Новости и материалы</h2>
+    <div class="tabs">
+      <div class="news__group-buttons">
+        <button class="news__button tabs__button news__button--active" type="button">Общее</button>
+        <button class="news__button tabs__button" type="button">Волонтёрство</button>
+        <button class="news__button tabs__button" type="button">Стажировки</button>
+        <button class="news__button tabs__button" type="button">Карьера</button>
+        <button class="news__button tabs__button" type="button">Путешествия</button>
+      </div>
+      <div class="tabs__content">
+        <div class="news__carousel container">
+          <div class="news__slider swiper">
+            <div class="news__carousel-wrapper swiper-wrapper">
+              <div class="news__carousel-item swiper-slide">
+                <div class="card-second card-second--news">
+                  <div class="card-second__image">
+                    <picture>
+                      <source media="(min-width: 1440px)" type="image/webp" width="286" height="400" srcset="img/news/photo-1-desktop@1x.webp 1x, img/news/photo-1-desktop@2x.webp 2x">
+                      <source media="(min-width: 1440px)" type="image/jpeg" width="286" height="400" srcset="img/news/photo-1-desktop@1x.jpg 1x, img/news/photo-1-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" type="image/webp" width="324" height="350" srcset="img/news/photo-1-tablet@1x.webp 1x, img/news/photo-1-tablet@2x.webp 2x">
+                      <source media="(min-width: 768px)" type="image/jpeg" width="324" height="350" srcset="img/news/photo-1-mobile@1x.jpg 1x, img/news/photo-1-tablet@2x.jpg 2x">
+                      <source type="image/webp" width="290" height="330" srcset="img/news/photo-1-mobile@1x.webp 1x, img/news/photo-1-mobile@2x.webp 2x">
+                      <img width="290" height="330" src="img/news/photo-1-mobile@1x.jpg" loading="lazy" srcset="img/news/photo-1-mobile@2x.jpg 2x" alt="Девушка в очках в желтой рубашке, в руках держит документы.">
+                    </picture>
+                  </div>
+                  <div class="card-second__content">
+                    <time class="card-second__date" datetime="2023-03-23T10:50:15+00:00">23/03/2023</time>
+                    <h3 class="card-second__title">Интервью с участницей программы стажировки</h3>
+                    <div class="card-second__content-text">
+                      <a href="#">Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="news__carousel-item swiper-slide">
+                <div class="card-second card-second--news">
+                  <div class="card-second__image">
+                    <picture>
+                      <source media="(min-width: 1440px)" type="image/webp" width="286" height="400" srcset="img/news/photo-1-desktop@1x.webp 1x, img/news/photo-1-desktop@2x.webp 2x">
+                      <source media="(min-width: 1440px)" type="image/jpeg" width="286" height="400" srcset="img/news/photo-1-desktop@1x.jpg 1x, img/news/photo-1-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" type="image/webp" width="324" height="350" srcset="img/news/photo-1-tablet@1x.webp 1x, img/news/photo-1-tablet@2x.webp 2x">
+                      <source media="(min-width: 768px)" type="image/jpeg" width="324" height="350" srcset="img/news/photo-1-mobile@1x.jpg 1x, img/news/photo-1-tablet@2x.jpg 2x">
+                      <source type="image/webp" width="290" height="330" srcset="img/news/photo-1-mobile@1x.webp 1x, img/news/photo-1-mobile@2x.webp 2x">
+                      <img width="290" height="330" src="img/news/photo-1-mobile@1x.jpg" loading="lazy" srcset="img/news/photo-1-mobile@2x.jpg 2x" alt="Девушка в очках в желтой рубашке, в руках держит документы.">
+                    </picture>
+                  </div>
+                  <div class="card-second__content">
+                    <time class="card-second__date" datetime="2023-03-23T10:50:15+00:00">23/03/2023</time>
+                    <h3 class="card-second__title">Интервью с участницей программы стажировки</h3>
+                    <div class="card-second__content-text">
+                      <a href="#">Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="news__carousel-item swiper-slide">
+                <div class="card-second card-second--news">
+                  <div class="card-second__image">
+                    <picture>
+                      <source media="(min-width: 1440px)" type="image/webp" width="286" height="400" srcset="img/news/photo-1-desktop@1x.webp 1x, img/news/photo-1-desktop@2x.webp 2x">
+                      <source media="(min-width: 1440px)" type="image/jpeg" width="286" height="400" srcset="img/news/photo-1-desktop@1x.jpg 1x, img/news/photo-1-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" type="image/webp" width="324" height="350" srcset="img/news/photo-1-tablet@1x.webp 1x, img/news/photo-1-tablet@2x.webp 2x">
+                      <source media="(min-width: 768px)" type="image/jpeg" width="324" height="350" srcset="img/news/photo-1-mobile@1x.jpg 1x, img/news/photo-1-tablet@2x.jpg 2x">
+                      <source type="image/webp" width="290" height="330" srcset="img/news/photo-1-mobile@1x.webp 1x, img/news/photo-1-mobile@2x.webp 2x">
+                      <img width="290" height="330" src="img/news/photo-1-mobile@1x.jpg" loading="lazy" srcset="img/news/photo-1-mobile@2x.jpg 2x" alt="Девушка в очках в желтой рубашке, в руках держит документы.">
+                    </picture>
+                  </div>
+                  <div class="card-second__content">
+                    <time class="card-second__date" datetime="2023-03-23T10:50:15+00:00">23/03/2023</time>
+                    <h3 class="card-second__title">Интервью с участницей программы стажировки</h3>
+                    <div class="card-second__content-text">
+                      <a href="#">Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabs__content">2</div>
+      <div class="tabs__content">3</div>
+      <div class="tabs__content">4</div>
+      <div class="tabs__content">5</div>
+    </div>
   </section>
 
   <main class="page__main"></main>

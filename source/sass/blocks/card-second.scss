@@ -11,6 +11,88 @@
     display: block;
     border-radius: 12px;
   }
+
+  &--news {
+    min-height: 330px;
+  }
+}
+
+.card-second--news .card-second__title {
+  border-top-left-radius: 0;
+  padding-left: 0;
+  background-color: $beige-color;
+  width: 216px;
+
+  &::after {
+    mask-image: url("../../__spritemap#sprite-angle-bottom-view");
+    background-color: $beige-color;
+  }
+}
+
+.card-second--news .card-second__content {
+  bottom: 0;
+  padding: 0 10px 0 0;
+  padding-left: 0;
+}
+
+.card-second--news .card-second__content-text {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  position: relative;
+  width: 263px;
+  padding-left: 0;
+  background-color: $beige-color;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -16px;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    mask-image: url("../../__spritemap#sprite-angle-bottom-view");
+    background-color: $beige-color;
+  }
+}
+
+.card-second__date {
+  background-color: $beige-color;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: $primary-color;
+  position: relative;
+  border-radius: 0 12px 0 0;
+  padding: 12px 12px 6px 0;
+  width: 78px;
+  min-height: 30px;
+  display: block;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -16px;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    mask-image: url("../../__spritemap#sprite-angle-bottom-view");
+    background-color: $beige-color;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -16px;
+    width: 16px;
+    height: 16px;
+    mask-image: url("../../__spritemap#sprite-angle-bottom-view");
+    background-color: $beige-color;
+  }
 }
 
 .card-second__image {
@@ -44,7 +126,8 @@
     display: block;
     width: 18px;
     height: 18px;
-    background-image: url("../../__spritemap#sprite-angle-bottom-view");
+    mask-image: url("../../__spritemap#sprite-angle-bottom-view");
+    background-color: $white-color;
     background-repeat: no-repeat;
     position: absolute;
     right: -18px;
@@ -58,6 +141,14 @@
   padding: 12px 18px 15px;
   width: 270px;
   min-height: 69px;
+}
+
+.card-second__content-text a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  color: $text-color;
   position: relative;
   display: flex;
   align-items: center;
@@ -76,19 +167,10 @@
     content: "";
     display: block;
     position: absolute;
-    right: 28px;
+    right: 11px;
     width: 10px;
     height: 10px;
     mask-image: url("../../__spritemap#sprite-arrow-right-top-view");
     background-color: #ffffff;
-  }
-
-  a {
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 117%;
-    color: $text-color;
-    padding-right: 10px;
   }
 }

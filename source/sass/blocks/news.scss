@@ -1,0 +1,27 @@
+.news__group-buttons {
+  display: flex;
+  gap: 3px;
+  overflow-x: auto;
+  padding-left: 15px;
+}
+
+.news__button {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $primary-color;
+  opacity: 0.6;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 12px 16px;
+
+  &--active {
+    border: 2px solid $primary-color;
+    border-radius: 20px;
+    padding: 12px 16px;
+    opacity: 1;
+  }
+}

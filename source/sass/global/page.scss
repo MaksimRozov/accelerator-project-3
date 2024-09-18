@@ -14,6 +14,7 @@
   line-height: 143%;
   color: $text-color;
   background-color: $beige-color;
+  counter-reset: count-list;
 
   &--lock {
     overflow: hidden;

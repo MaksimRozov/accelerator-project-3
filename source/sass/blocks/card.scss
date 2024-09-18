@@ -8,7 +8,9 @@
   &::before {
     content: "";
     position: absolute;
-    background-image: url("../../__spritemap#sprite-star-view");
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 42px;
     height: 42px;
     left: -20px;
@@ -32,5 +34,22 @@
     line-height: 125%;
     letter-spacing: 0.01em;
     text-transform: uppercase;
+  }
+}
+
+.card--star {
+  &::before {
+    background-image: url("../../__spritemap#sprite-star-view");
+  }
+}
+
+.card--number {
+  padding: 25px 26px;
+
+  &::before {
+    counter-increment: count-list;
+    content: counter(count-list);
+    color: $white-color;
+    font-size: 20px;
   }
 }
