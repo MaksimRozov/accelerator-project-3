@@ -1,0 +1,110 @@
+.accordion {
+  @include list-style-none;
+
+  display: grid;
+  gap: 10px;
+}
+
+.accordion__item {
+  padding: 22px 17px;
+  border: 2px solid $primary-color;
+  border-radius: 14px;
+  color: $primary-color;
+
+  h3 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 112%;
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 22px;
+      line-height: 118%;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 28px;
+      line-height: 121%;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 143%;
+    padding-top: 20px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 125%;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 16px;
+      line-height: 162%;
+    }
+  }
+}
+
+.accordion__header {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  gap: 22px;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 40px;
+  }
+}
+
+.accordion__button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  padding: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $primary-color;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    mask-image: url("../../__spritemap#sprite-accordion-plus-view");
+    background-color: $white-color;
+    mask-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.accordion__item--active {
+  background-color: $primary-color;
+  color: $white-color;
+}
+
+.accordion__item--active .accordion__button {
+  background-color: $white-color;
+
+  &::after {
+    mask-image: url("../../__spritemap#sprite-accordion-minus-view");
+    background-color: $primary-color;
+    width: 18px;
+    height: 17px;
+  }
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
