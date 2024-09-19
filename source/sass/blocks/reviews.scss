@@ -1,0 +1,14 @@
+.reviews__carousel {
+  position: relative;
+}
+
+.reviews__carousel-control-panel {
+  position: absolute;
+  top: -36px;
+  right: 0;
+}
+
+.reviews__carousel .reviews__item {
+  min-height: 100%;
+  height: auto;
+}

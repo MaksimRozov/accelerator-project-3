@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import { Navigation, Grid, Pagination } from 'swiper/modules';
 
-// import 'swiper/css';
+import 'swiper/css';
 import 'swiper/css/grid';
 
 const newsSliderElement = document.querySelector('.news__slider');
@@ -39,7 +39,7 @@ const sliderNews = () => {
           spaceBetween: 15,
         },
         768: {
-          slidesPerView: 'auto',
+          slidesPerView: 2,
           spaceBetween: 30,
           allowTouchMove: true,
         },
