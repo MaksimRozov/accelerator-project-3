@@ -3,17 +3,19 @@ import { Pagination, EffectFade } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 
 const mainCarouselElement = document.querySelector('.hero__slider');
+const paginationButtons = document.querySelectorAll('.hero__dots');
+const panelControl = document.querySelector('.hero__pagination.root');
+const links = mainCarouselElement.querySelectorAll('.hero__button');
+const panelControlContainer = document.querySelectorAll('.hero__pagination-container');
+
 
 const sliderHero = () => {
   if (mainCarouselElement) {
-    const blockContents = document.querySelectorAll('.card-hero__content');
 
     // eslint-disable-next-line no-unused-vars
     const swiperHero = new Swiper(mainCarouselElement, {
 
       modules: [Pagination, EffectFade],
-      effect: 'fade',
-      crossFade: 'true',
       slidesPerView: 1,
       watchOverflow: true,
       speed: 300,
@@ -23,7 +25,7 @@ const sliderHero = () => {
         bulletClass: 'hero__dots',
         bulletActiveClass: 'hero__dots--active',
         clickable: true,
-        bulletElement: 'button type="button" tabindex="0"',
+        bulletElement: 'button type="button"',
       },
       breakpoints: {
         320: {
@@ -43,88 +45,76 @@ const sliderHero = () => {
 
     });
 
+    // const setAttributeOnButtons = () => {
+    //   const panelClonePagination = document.querySelectorAll('.clonePanelPagination');
+    //   panelClonePagination.forEach((element, index) => {
+    //     if (index === sliderHero.realIndex) {
+    //       const button = element.querySelector('.hero__dots');
+    //       button.setAttribute('tabindex', '0');
+    //     }
+    //   });
+    // };
 
-    const paginationButtons = document.querySelectorAll('.hero__dots');
+    const setTabIndex = (activeIndex) => {
+      links.forEach((link, index) => {
+        link.setAttribute('tabindex', index === activeIndex ? '0' : '-1');
+      });
+    };
+
+    // Устанавливаем tabindex для первого слайда по умолчанию
+    setTabIndex(swiperHero.activeIndex);
+    // setAttributeOnButtons();
 
     paginationButtons.forEach((button, index) => {
       button.innerHTML = `<span class="visually-hidden">Переход на слайдер номер ${index + 1}</span>`;
     });
-    const panelControl = document.querySelector('.hero__pagination');
-    // const blockContents = document.querySelectorAll('.swiper-slide'); // Замените на ваш селектор слайдов
 
-    const updateActiveButton = (activeIndex) => {
-      paginationButtons.forEach((btn, index) => {
-        btn.classList.toggle('hero__dots--active', index === activeIndex);
-      });
-    };
+    panelControlContainer.forEach((elementCloneContainer) => {
+      const clonePanel = panelControl.cloneNode(true);
+      clonePanel.classList.remove('root');
+      clonePanel.classList.add('clonePanelPagination');
+      elementCloneContainer.append(clonePanel);
 
-    let currentFocusButton = null;
+      elementCloneContainer.addEventListener('click', (event) => {
+        if (event.target.classList.contains('hero__dots')) {
+          const child = event.target;
+          const parent = child.parentNode;
+          const index = Array.prototype.indexOf.call(parent.children, child);
 
-    const setPaginationPosition = (activeIndex) => {
-      // Удаляем содержимое всех контейнеров пагинации
-      blockContents.forEach((content) => {
-        const panelControlContainer = content.querySelector('.hero__pagination-container');
-        if (panelControlContainer) {
-          panelControlContainer.innerHTML = ''; // Очищаем контейнер
+          // если вы не используете режим цикла, измените на slideTo()
+          swiperHero.slideToLoop(index);
         }
       });
 
-      const activeElement = blockContents[activeIndex];
+      swiperHero.on('paginationUpdate', (swiper) => {
+        setTabIndex(swiper.realIndex);
+        // Получаем все элементы пагинации
+        const paginationElements = document.querySelectorAll('.hero__pagination.clonePanelPagination');
 
-      if (activeElement) {
-        const panelControlContainer = activeElement.querySelector('.hero__pagination-container');
+        paginationElements.forEach((paginationElement) => {
+          // Находим все button в текущем элементе пагинации
+          const buttonElement = paginationElement.querySelectorAll('.hero__dots');
 
-        const panelClone = panelControl.cloneNode(true);
-        panelControlContainer.append(panelClone);
+          // Удаляем класс активного button у всех
+          buttonElement.forEach((bullet) => {
+            bullet.classList.remove('hero__dots--active');
 
-        // Устанавливаем обработчики событий для кнопок пагинации
-        const newPaginationButtons = panelClone.querySelectorAll('.hero__dots');
-        newPaginationButtons.forEach((button, index) => {
-          button.onclick = () => {
-            // Сохраняем текущую кнопку фокуса
-            currentFocusButton = button;
+          });
 
-            swiperHero.slideTo(index);
-            updateActiveButton(index);
+          // Добавляем класс активного button к текущему активному индексу
+          if (buttonElement[swiper.realIndex]) {
+            buttonElement[swiper.realIndex].classList.add('hero__dots--active');
+          }
 
-            // Сохраняем фокус на кнопке
-            setTimeout(() => {
-              if (currentFocusButton) {
-                currentFocusButton.focus();
-              }
-            }, 100); // Используем setTimeout для обеспечения правильного порядка выполнения
-          };
         });
-      }
-    };
+      });
 
 
-    setPaginationPosition(swiperHero.activeIndex);
-
-    // Обработчик события для изменения слайда
-    swiperHero.on('slideChange', () => {
-      const activeIndex = swiperHero.activeIndex;
-      setPaginationPosition(activeIndex);
-      updateActiveButton(activeIndex);
     });
-
-    swiperHero.on('slideChangeTransitionEnd', () => {
-      const activeIndex = swiperHero.activeIndex;
-      setPaginationPosition(activeIndex);
-      updateActiveButton(activeIndex);
-    });
-    swiperHero.on('slideChangeTransitionStart', () => {
-      const activeIndex = swiperHero.activeIndex;
-      setPaginationPosition(activeIndex);
-      updateActiveButton(activeIndex);
-    });
-
-
-    // Инициализация активной кнопки при загрузке
-    updateActiveButton(swiperHero.activeIndex);
 
 
   }
 };
+
 
 export { sliderHero };
