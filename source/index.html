@@ -684,44 +684,46 @@
         </div>
       </div>
     </section>
-    <section class="form-block" data-test="form">
-      <div class="form">
-        <div class="form__content">
-          <h2 class="form__title">Напишите нам</h2>
-          <p class="form__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
-          <div class="form__wrapper">
-            <form action="https://echo.htmlacademy.ru" method="post">
-              <div class="form__item">
-                <label class="form__label" for="name">Имя</label>
-                <input class="form__input" type="text" id="name" name="name" required>
-              </div>
-              <div class="form__item">
-                <label class="form__label" for="phone">Телефон</label>
-                <input class="form__input" type="tel" id="phone" name="phone" required>
-              </div>
-              <div class="form__item">
-                <label class="form__label" for="message">Ваше сообщение</label>
-                <textarea class="form__input" id="message" name="message"></textarea>
-              </div>
-              <div class="form__item">
-                <label class="form__label" for="city-select">Выберите город</label>
-                <select name="city" id="city-select">
-                  <option value=""></option>
-                  <option value="petersburg">Санкт-Петербург</option>
-                  <option value="samara">Самара</option>
-                  <option value="perm">Пермь</option>
-                  <option value="novosibirsk">Новосибирск</option>
-                </select>
-              </div>
-              <div class="form__item">
-                <label class="form__check-label">
-                  <input class="visually-hidden form__check-input" type="checkbox" name="personal">
-                  <span class="form__check-custom"></span>
-                  <span class="form__check-text">Я согласен на обработку моих персональных данных</span>
-                </label>
-              </div>
-              <button class="form__button buton button--blue" type="button">отправить</button>
-            </form>
+    <section class="form-block container" data-test="form">
+      <div class="form__container">
+        <div class="form">
+          <div class="form__content">
+            <h2 class="form__title">Напишите нам</h2>
+            <p class="form__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+            <div class="form__wrapper">
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <div class="form__item">
+                  <label class="form__label" for="name">Имя</label>
+                  <input class="form__input" type="text" id="name" name="name" required>
+                </div>
+                <div class="form__item">
+                  <label class="form__label" for="phone">Телефон</label>
+                  <input class="form__input" type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form__item">
+                  <label class="form__label" for="message">Ваше сообщение</label>
+                  <textarea class="form__input form__input--textarea" id="message" name="message"></textarea>
+                </div>
+                <div class="form__item">
+                  <label class="form__label" for="city-select">Выберите город</label>
+                  <select class="form__input form__input--select" name="city" id="city-select">
+                    <option value=""></option>
+                    <option value="petersburg">Санкт-Петербург</option>
+                    <option value="samara">Самара</option>
+                    <option value="perm">Пермь</option>
+                    <option value="novosibirsk">Новосибирск</option>
+                  </select>
+                </div>
+                <div class="form__item">
+                  <label class="form__check-label">
+                    <input class="visually-hidden form__check-input" type="checkbox" name="personal">
+                    <span class="form__check-custom"></span>
+                    <span class="form__check-text">Я согласен на обработку моих персональных&nbsp;<br>данных</span>
+                  </label>
+                </div>
+                <button class="form__button button button--blue" type="button">Отправить</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

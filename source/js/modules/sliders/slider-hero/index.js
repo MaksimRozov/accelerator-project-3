@@ -45,25 +45,34 @@ const sliderHero = () => {
 
     });
 
-    // const setAttributeOnButtons = () => {
-    //   const panelClonePagination = document.querySelectorAll('.clonePanelPagination');
-    //   panelClonePagination.forEach((element, index) => {
-    //     if (index === sliderHero.realIndex) {
-    //       const button = element.querySelector('.hero__dots');
-    //       button.setAttribute('tabindex', '0');
-    //     }
-    //   });
-    // };
 
+    const setAttributeOnButtons = (activeIndex) => {
+      const panelClonePagination = document.querySelectorAll('.clonePanelPagination');
+
+      panelClonePagination.forEach((element, index) => {
+        const buttons = element.querySelectorAll('.hero__dots');
+        const tabindexValue = index === activeIndex ? '0' : '-1';
+
+        buttons.forEach((item) => {
+          item.setAttribute('tabindex', tabindexValue);
+        });
+      });
+    };
+
+
+    swiperHero.on('slideChange', (swiper) => {
+      setAttributeOnButtons(swiper.activeIndex);
+
+    });
     const setTabIndex = (activeIndex) => {
       links.forEach((link, index) => {
         link.setAttribute('tabindex', index === activeIndex ? '0' : '-1');
       });
     };
 
+
     // Устанавливаем tabindex для первого слайда по умолчанию
     setTabIndex(swiperHero.activeIndex);
-    // setAttributeOnButtons();
 
     paginationButtons.forEach((button, index) => {
       button.innerHTML = `<span class="visually-hidden">Переход на слайдер номер ${index + 1}</span>`;
@@ -104,15 +113,21 @@ const sliderHero = () => {
           // Добавляем класс активного button к текущему активному индексу
           if (buttonElement[swiper.realIndex]) {
             buttonElement[swiper.realIndex].classList.add('hero__dots--active');
-          }
 
+            // Устанавливаем фокус на активный button
+            buttonElement[swiper.realIndex].focus();
+          }
         });
       });
-
-
+      swiperHero.on('slideChange', (swiper) => {
+        setAttributeOnButtons(swiper.realIndex);
+        // Устанавливаем фокус на активный button при смене слайда
+        const activeButtons = document.querySelectorAll('.clonePanelPagination .hero__dots');
+        if (activeButtons[swiper.realIndex]) {
+          activeButtons[swiper.realIndex].focus();
+        }
+      });
     });
-
-
   }
 };
 

@@ -47,6 +47,21 @@
   }
 }
 
+.button--blue {
+  border: 1px solid $primary-color;
+  color: $primary-color;
+
+  &::after {
+    background-color: $primary-color;
+    flex-basis: 34px;
+  }
+
+  &::before {
+    mask-image: url("../../__spritemap#sprite-arrow-right-top-view");
+    background-color: $white-color;
+  }
+}
+
 .button--light:hover:not(:disabled):not(.button--disabled) {
   background-color: $primary-color;
   color: $white-color;
