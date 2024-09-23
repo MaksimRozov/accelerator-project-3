@@ -1,0 +1,63 @@
+.new-select {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 16px 21px 18px 23px;
+  width: 260px;
+  height: 52px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.new-select__list {
+  position: absolute;
+  top: 58px;
+  left: 0;
+  border-radius: 8px;
+
+  // border: 1px solid #ced4da;
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  background-color: #ffffff;
+  user-select: none;
+}
+
+.new-select__list.new-select--on {
+  display: block;
+}
+
+.new-select__item span {
+  display: block;
+  border-radius: 8px 8px 0 0;
+  padding: 17px 20px;
+  height: 48px;
+  font-size: 14px;
+  line-height: 100%;
+  color: $text-color;
+}
+
+.new-select__item span:hover {
+  color: $primary-color;
+}
+
+.new-select::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 21px;
+  top: 50%;
+  background-image: url("../../__spritemap#sprite-arrow-select-down-view");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  opacity: 0.6;
+  transition: all 0.27s ease-in-out;
+  transform: translateY(-50%);
+}
+
+.new-select.new-select--on::after {
+  background-image: url("../../__spritemap#sprite-arrow-select-top-view");
+}
