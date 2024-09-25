@@ -14,13 +14,11 @@
   top: 58px;
   left: 0;
   border-radius: 8px;
-
-  // border: 1px solid #ced4da;
-  cursor: pointer;
   width: 100%;
   z-index: 2;
   background-color: #ffffff;
   user-select: none;
+  cursor: pointer;
 }
 
 .new-select__list.new-select--on {

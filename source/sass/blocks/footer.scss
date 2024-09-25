@@ -1,0 +1,74 @@
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footer__menu {
+  @include list-style-none;
+
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer__menu-link {
+  text-decoration: none;
+  color: $text-color;
+}
+
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer__info {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 12px;
+  line-height: 117%;
+  color: $text-color;
+}
+
+.footer__info-politics {
+  font-size: 12px;
+  line-height: 117%;
+  color: $text-color;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  text-align: center;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.footer__copy {
+  opacity: 0.6;
+}
+
+.footer__social {
+  @include list-style-none;
+
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.footer__social-link {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-color;
+}
