@@ -1,6 +1,6 @@
 .button {
   border-radius: 30px;
-  padding: 5px 5px 5px 21px;
+  padding: 6px 5px 5px 21px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -20,14 +20,16 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    right: 5px;
+    right: 4px;
+    top: 4px;
   }
 
   &::before {
     content: "";
     position: absolute;
-    right: 18px;
+    right: 17px;
     width: 8px;
+    top: 17px;
     height: 8px;
     z-index: 1;
   }
@@ -47,18 +49,26 @@
   }
 }
 
+.button--hero {
+  &::before {
+    mask-image: url("../../__spritemap#sprite-arrow-right-top-second-view");
+    background-color: $white-color;
+  }
+}
+
 .button--blue {
-  border: 1px solid $primary-color;
-  color: $primary-color;
+  border: 1px solid $white-color;
+  color: $white-color;
+  background-color: $primary-color;
 
   &::after {
-    background-color: $primary-color;
+    background-color: $white-color;
     flex-basis: 34px;
   }
 
   &::before {
     mask-image: url("../../__spritemap#sprite-arrow-right-top-view");
-    background-color: $white-color;
+    background-color: $primary-color;
   }
 }
 

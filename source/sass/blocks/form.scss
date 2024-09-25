@@ -1,6 +1,7 @@
 .form {
   border-radius: 16px;
   padding: 15px;
+  padding-bottom: 27px;
 
   background-color: $primary-color;
   margin-left: auto;
@@ -11,7 +12,7 @@
 .form__container {
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 40px;
+  padding-top: 43px;
   padding-bottom: 40px;
   /* stylelint-disable-next-line */
   background-image: image-set(
@@ -36,10 +37,14 @@
   font-size: 18px;
   line-height: 122%;
   color: $white-color;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .form__description {
   color: $beige-color;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .form__label {
@@ -59,7 +64,8 @@
   height: 50px;
 
   &--textarea {
-    height: 94px;
+    min-height: 94px;
+    vertical-align: top;
   }
 
   &--select {
@@ -77,13 +83,13 @@
 
 .form__check-text {
   font-size: 12px;
-  line-height: 117%;
-  color: $white-color;
+  line-height: 14px;
+  opacity: 0.9;
 }
 
 .form__button {
-  width: 100%;
-  text-align: center;
+  width: 260px;
+  padding-left: 74px;
 }
 
 .form__check-label {

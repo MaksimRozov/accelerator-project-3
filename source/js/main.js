@@ -5,7 +5,7 @@ import { sliderNews } from './modules/sliders/slider-news';
 import { tabsInit } from './modules/tabs';
 import { accordionInit } from './modules/accordion';
 import { sliderReviews } from './modules/sliders/slider-reviews';
-import { selectInit } from './custom-select';
+import { selectInit } from './modules/custom-select';
 
 
 window.addEventListener('DOMContentLoaded', () => {

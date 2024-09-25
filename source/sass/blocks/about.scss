@@ -1,13 +1,31 @@
-.about__title > p {
+.about__title + p {
   font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 14px;
 }
 
 .about {
+  padding-top: 51px;
+  padding-bottom: 50px;
+
   h3 {
     font-weight: 400;
     font-size: 18px;
     line-height: 122%;
     color: $primary-color;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  h3 + p {
+    margin: 0;
+    margin-bottom: 30px;
   }
 }
 
@@ -18,10 +36,13 @@
   grid-template-columns: 1fr;
   gap: 22px;
   border-radius: 20px;
-  padding: 20px 20px 40px;
+  padding: 20px 20px 39px;
+  padding-top: 42px;
+  padding-bottom: 40px;
   background-color: $primary-color;
 }
 
 .about__button {
   max-width: 223px;
+  margin-bottom: 40px;
 }

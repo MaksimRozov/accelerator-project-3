@@ -7,9 +7,18 @@
 
 .grant__title {
   color: $white-color;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.grant__title + p {
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 .grant__image {
+  margin-bottom: 36px;
+
   img {
     border-radius: 16px;
   }
@@ -21,4 +30,11 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
+  padding-left: 15px;
+}
+
+.grant__heading {
+  font-size: 18px;
+  line-height: 122%;
+  margin-bottom: 29px;
 }

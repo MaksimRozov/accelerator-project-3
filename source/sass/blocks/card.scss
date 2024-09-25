@@ -1,7 +1,10 @@
 .card {
-  color: $white-color;
+  color: #ffffff;
   padding: 16px 21px;
-  border: 1px solid $beige-color;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-bottom: 15px;
+  border: 1px solid #f0efe9;
   border-radius: 16px;
   position: relative;
 
@@ -14,7 +17,7 @@
     width: 42px;
     height: 42px;
     left: -20px;
-    top: -19px;
+    top: -23px;
     border-radius: 50%;
     background-color: $primary-color;
     background-size: 18px 22px;
@@ -28,12 +31,15 @@
   font-size: 14px;
   line-height: 143%;
   color: $beige-color;
+  margin: 0;
 
   span {
     font-size: 16px;
     line-height: 125%;
     letter-spacing: 0.01em;
     text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
   }
 }
 
@@ -44,12 +50,20 @@
 }
 
 .card--number {
-  padding: 25px 26px;
+  padding: 10px 26px;
 
   &::before {
     counter-increment: count-list;
     content: counter(count-list);
     color: $white-color;
-    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    left: -16px;
+    top: -5px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
   }
 }

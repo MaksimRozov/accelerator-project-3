@@ -19,6 +19,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
+  top: 10px;
   display: none;
 }
 
@@ -38,7 +39,7 @@
     background-image: url("../../__spritemap#sprite-angle-bottom-view");
     background-repeat: no-repeat;
     position: absolute;
-    right: -9px;
+    right: -10px;
     bottom: 0;
   }
 }

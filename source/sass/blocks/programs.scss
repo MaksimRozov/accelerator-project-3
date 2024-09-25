@@ -1,13 +1,25 @@
+.programs {
+  padding-top: 55px;
+  padding-bottom: 50px;
+}
+
 .programs__carousel {
   position: relative;
+  margin-bottom: 30px;
 }
 
 .programs__carousel-control-panel {
   position: absolute;
-  top: -35px;
+  top: -56px;
   right: 0;
 }
 
 .programs__button {
   width: 205px;
+  padding-left: 31px;
+}
+
+.programs__title {
+  margin: 0;
+  margin-bottom: 35px;
 }

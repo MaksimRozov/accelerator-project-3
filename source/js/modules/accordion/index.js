@@ -3,6 +3,8 @@ const ActiveClass = {
   ACCORDION_ACTIVE: 'accordion__item--active'
 };
 
+const ACTIVE_ACCORDION_DEFAULT = 2;
+
 const accordionInit = () => {
   accordionParent.forEach((parent, indexParent) => {
     parent.setAttribute('id', `accordion-${indexParent + 1}`);
@@ -19,7 +21,7 @@ const accordionInit = () => {
         // const headerButton = item.querySelector('.accordion__button');
         const content = item.querySelector('.accordion__content');
 
-        if (parentId === 'accordion-1' && index === 0) {
+        if (parentId === 'accordion-1' && index === ACTIVE_ACCORDION_DEFAULT) {
           item.classList.add(ActiveClass.ACCORDION_ACTIVE);
           content.style.maxHeight = `${content.scrollHeight}px`;
         }

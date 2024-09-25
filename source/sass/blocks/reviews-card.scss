@@ -1,14 +1,10 @@
 .reviews-card {
   border: 2px solid $primary-color;
   border-radius: 16px;
-  padding: 32px 17px;
+  padding: 30px 15px;
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-.reviews__text {
-  flex-grow: 1;
 }
 
 .reviews-card__avatar {
@@ -30,6 +26,7 @@
 .reviews-card__info {
   display: flex;
   gap: 25px;
+  margin-bottom: 27px;
 }
 
 .reviews-card__info-item {
