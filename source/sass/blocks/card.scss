@@ -50,7 +50,8 @@
 }
 
 .card--number {
-  padding: 10px 26px;
+  padding: 25px 26px;
+  padding-bottom: 23px;
 
   &::before {
     counter-increment: count-list;
