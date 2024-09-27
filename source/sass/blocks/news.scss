@@ -8,6 +8,12 @@
   overflow-x: auto;
   padding-left: 15px;
   margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 45px;
+    padding-right: 45px;
+    overflow-x: unset;
+  }
 }
 
 .news__button {
@@ -28,13 +34,23 @@
     border-radius: 20px;
     opacity: 1;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 16px 22px;
+  }
 }
 
 .news__carousel .news__carousel-wrapper {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-auto-flow: column;
-  row-gap: 5px;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
 }
 
 .news__carousel .news__carousel-item {

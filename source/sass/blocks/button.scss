@@ -33,6 +33,21 @@
     height: 8px;
     z-index: 1;
   }
+
+  @media (min-width: $tablet-width) {
+    min-height: 56px;
+
+    &::after {
+      width: 46px;
+      height: 46px;
+      top: 2px;
+    }
+
+    &::before {
+      right: 22px;
+      top: 22px;
+    }
+  }
 }
 
 .button--light {

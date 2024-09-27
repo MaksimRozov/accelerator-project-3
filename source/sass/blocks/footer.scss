@@ -13,6 +13,10 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 15px;
+  }
 }
 
 .footer__menu-link {
@@ -46,6 +50,10 @@
   margin: 0 auto;
   margin-bottom: 10px;
   padding-bottom: 2px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
 }
 
 .footer__copy {
@@ -55,13 +63,17 @@
 .footer__social {
   @include list-style-none;
 
-  width: 30px;
-  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 98px;
+    margin: 0;
+    margin-left: auto;
+  }
 }
 
 .footer__social-link {
@@ -72,4 +84,21 @@
   align-items: center;
   justify-content: center;
   background-color: $primary-color;
+
+  @media (min-width: $tablet-width) {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.footer__top {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    gap: 98px;
+  }
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
 }

@@ -1,12 +1,19 @@
 .form {
   border-radius: 16px;
   padding: 15px;
+  padding-top: 14px;
   padding-bottom: 27px;
 
   background-color: $primary-color;
   margin-left: auto;
   margin-right: auto;
   color: $white-color;
+
+  @media (min-width: $tablet-width) {
+    width: 442px;
+    margin-left: 0;
+    padding: 40px;
+  }
 }
 
 .form__container {
@@ -23,6 +30,30 @@
   );
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 16px;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    /* stylelint-disable-next-line */
+    background-image: image-set(
+      url("../../img/form/photo-tablet@1x.jpg") type("image/jpeg") 1x,
+      url("../../img/form/photo-tablet@2x.jpg") type("image/jpeg") 2x,
+      url("../../img/form/photo-tablet@1x.webp") type("image/webp") 1x,
+      url("../../img/form/photo-tablet@2x.webp") type("image/webp") 2x
+    );
+  }
+
+  @media (min-width: $desktop-width) {
+    /* stylelint-disable-next-line */
+    background-image: image-set(
+      url("../../img/form/photo-desktop@1x.jpg") type("image/jpeg") 1x,
+      url("../../img/form/photo-desktop@2x.jpg") type("image/jpeg") 2x,
+      url("../../img/form/photo-desktop@1x.webp") type("image/webp") 1x,
+      url("../../img/form/photo-desktop@2x.webp") type("image/webp") 2x
+    );
+  }
 }
 
 .form-block {
@@ -30,6 +61,12 @@
   padding-left: 0;
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 45px;
+    padding-left: 45px;
+    border-radius: 16px;
+  }
 }
 
 .form__title {
@@ -39,12 +76,22 @@
   color: $white-color;
   margin: 0;
   margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .form__description {
   color: $beige-color;
   margin: 0;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .form__label {
@@ -54,6 +101,11 @@
   opacity: 0.8;
   margin-bottom: 12px;
   display: block;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 .form__input {
@@ -85,11 +137,26 @@
   font-size: 12px;
   line-height: 14px;
   opacity: 0.9;
+
+  @media (min-width: $tablet-width) {
+    font-size: 12px;
+    line-height: 12px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .form__button {
   width: 260px;
   padding-left: 74px;
+
+  @media (min-width: $tablet-width) {
+    width: 352px;
+    min-height: 52px;
+    padding-left: 100px;
+  }
 }
 
 .form__check-label {
@@ -99,9 +166,11 @@
 }
 
 .form__check-custom {
-  width: 20px;
+  width: 22px;
   height: 20px;
-  background-color: $white-color;
+  position: relative;
+  top: -1px;
+  background-color: #ffffff;
   display: block;
 }
 

@@ -23,10 +23,6 @@
   }
 }
 
-// .card-second--small .card-second__title {
-//   min-height: 0;
-// }
-
 .card-second--news .card-second__title {
   border-top-left-radius: 0;
   padding-left: 0;
@@ -55,8 +51,6 @@
   padding-left: 0;
   padding-bottom: 9px;
   padding-top: 12px;
-
-  // min-height: 64px;
   background-color: $beige-color;
 
   &::after {
@@ -84,8 +78,6 @@
   width: 78px;
   display: block;
   padding: 13px 12px 5px 0;
-
-  // min-height: 30px;
 
   &::after {
     content: "";
@@ -124,11 +116,16 @@
   left: 0;
   right: 0;
   padding: 0 10px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
+  }
 }
 
 .card-second__title {
   background-color: $white-color;
-  width: 146px;
+  min-width: 146px;
+  width: fit-content;
   font-weight: 400;
   border-radius: 12px 12px 0 0;
   padding: 18px 18px 6px;
@@ -150,42 +147,57 @@
     right: -18px;
     bottom: 0;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 17px;
+  }
 }
 
 .card-second__content-text {
   background-color: $white-color;
   border-radius: 0 12px 12px;
   padding: 12px 18px 15px;
-  width: 270px;
-
-  // min-height: 69px;
-}
-
-.card-second__content-text a {
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 117%;
-  color: $text-color;
-  position: relative;
+  width: 100%;
   display: flex;
   align-items: center;
 
-  &::after {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 30px;
-    background-color: $primary-color;
-    border-radius: 50%;
-    flex-shrink: 0;
+  p {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 117%;
+    color: $text-color;
+    position: relative;
+    display: flex;
+    align-items: center;
   }
+
+  @media (min-width: $tablet-width) {
+    p {
+      padding-right: 46px;
+    }
+  }
+}
+
+.card-second__content-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: $primary-color;
+  border-radius: 50%;
+  flex-shrink: 0;
 
   &::before {
     content: "";
     display: block;
-    position: absolute;
-    right: 11px;
     width: 10px;
     height: 10px;
     mask-image: url("../../__spritemap#sprite-arrow-right-top-view");

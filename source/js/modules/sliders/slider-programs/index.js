@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 
@@ -9,7 +9,7 @@ const sliderPrograms = () => {
   if (programsSliderElement) {
     // eslint-disable-next-line no-unused-vars
     const swiperPrograms = new Swiper(programsSliderElement, {
-      modules: [Navigation],
+      modules: [Navigation, Pagination],
       grabCursor: false,
       watchOverflow: true,
       speed: 1000,
@@ -19,6 +19,10 @@ const sliderPrograms = () => {
         prevEl: '.programs__carousel-prev',
         disabledClass: 'arrow-style-slider__button--disabled',
       },
+      pagination: {
+        el: '.programs__slider-pagination',
+        type: 'progressbar',
+      },
       breakpoints: {
         320: {
           slidesPerView: 1,
@@ -27,7 +31,7 @@ const sliderPrograms = () => {
         },
 
         768: {
-          slidesPerView: 'auto',
+          slidesPerView: 2.15,
           spaceBetween: 30,
           allowTouchMove: true
         },

@@ -1,6 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
-
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 
 const reviewsSliderElement = document.querySelector('.reviews__slider');
@@ -9,7 +8,7 @@ const sliderReviews = () => {
   if (reviewsSliderElement) {
     // eslint-disable-next-line no-unused-vars
     const swiperPrograms = new Swiper(reviewsSliderElement, {
-      modules: [Navigation],
+      modules: [Navigation, Pagination],
       grabCursor: false,
       watchOverflow: true,
       speed: 1000,
@@ -19,6 +18,10 @@ const sliderReviews = () => {
         prevEl: '.reviews__carousel-prev',
         disabledClass: 'arrow-style-slider__button--disabled',
       },
+      pagination: {
+        el: '.reviews__pagination',
+        type: 'progressbar',
+      },
       breakpoints: {
         320: {
           slidesPerView: 1,
@@ -27,7 +30,7 @@ const sliderReviews = () => {
         },
 
         768: {
-          slidesPerView: 'auto',
+          slidesPerView: 1.28,
           spaceBetween: 30,
           allowTouchMove: true
         },

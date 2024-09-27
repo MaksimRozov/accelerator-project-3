@@ -31,10 +31,21 @@
   grid-template-columns: 1fr;
   gap: 15px;
   padding-left: 15px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 305px 305px;
+    column-gap: 48px;
+    row-gap: 25px;
+  }
 }
 
 .grant__heading {
   font-size: 18px;
   line-height: 122%;
   margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }

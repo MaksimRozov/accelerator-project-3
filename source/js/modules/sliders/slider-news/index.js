@@ -40,7 +40,7 @@ const sliderNews = () => {
         },
         768: {
           slidesPerView: 2,
-          spaceBetween: 30,
+          // spaceBetween: 30,
           allowTouchMove: true,
         },
         1440: {

@@ -1,11 +1,10 @@
 import Swiper from 'swiper';
-import { Pagination, EffectFade } from 'swiper/modules';
-import 'swiper/css/effect-fade';
+import { Pagination } from 'swiper/modules';
 
 const mainCarouselElement = document.querySelector('.hero__slider');
 const paginationButtons = document.querySelectorAll('.hero__dots');
 const panelControl = document.querySelector('.hero__pagination.root');
-const links = mainCarouselElement.querySelectorAll('.hero__button');
+const links = mainCarouselElement.querySelectorAll('.card-hero__button');
 const panelControlContainer = document.querySelectorAll('.hero__pagination-container');
 
 
@@ -15,7 +14,7 @@ const sliderHero = () => {
     // eslint-disable-next-line no-unused-vars
     const swiperHero = new Swiper(mainCarouselElement, {
 
-      modules: [Pagination, EffectFade],
+      modules: [Pagination],
       slidesPerView: 1,
       watchOverflow: true,
       speed: 300,

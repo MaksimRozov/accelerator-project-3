@@ -29,6 +29,11 @@
   line-height: 143%;
   color: $white-color;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .contacts__content {
@@ -36,4 +41,9 @@
   padding-top: 35px;
   padding-bottom: 30px;
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }

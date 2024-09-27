@@ -5,6 +5,10 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding: 52px;
+  }
 }
 
 .reviews-card__avatar {
@@ -20,6 +24,13 @@
     font-size: 14px;
     line-height: 129%;
     color: $primary-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    span {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -46,12 +57,20 @@
     color: $text-color;
     opacity: 0.9;
   }
+
+  @media (min-width: $tablet-width) {
+    dd {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
 }
 
-.reviews__heading {
-  margin: 0;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 112%;
-  color: $primary-color;
+.reviews-card__header {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
 }

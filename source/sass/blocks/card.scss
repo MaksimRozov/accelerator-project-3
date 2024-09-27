@@ -33,6 +33,11 @@
   color: $beige-color;
   margin: 0;
 
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   span {
     font-size: 16px;
     line-height: 125%;
@@ -40,6 +45,17 @@
     text-transform: uppercase;
     display: block;
     margin-bottom: 15px;
+
+    @media (min-width: $tablet-width) {
+      padding-right: 40px;
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 26px;
+      line-height: 30px;
+    }
   }
 }
 

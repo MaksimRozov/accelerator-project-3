@@ -1,6 +1,11 @@
 .programs {
   padding-top: 55px;
   padding-bottom: 50px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 0;
+  }
 }
 
 .programs__carousel {
@@ -12,11 +17,37 @@
   position: absolute;
   top: -56px;
   right: 0;
+
+  @media (min-width: $tablet-width) {
+    bottom: -50px;
+    top: auto;
+  }
+}
+
+.programs__carousel .programs__slider-pagination {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    top: auto;
+    bottom: -40px;
+    max-width: 562px;
+    height: 2px;
+
+    --swiper-pagination-color: #316dc2;
+    --swiper-pagination-progressbar-bg-color: rgba(49, 109, 194, 0.2);
+  }
 }
 
 .programs__button {
   width: 205px;
   padding-left: 31px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 64px;
+    right: 50px;
+  }
 }
 
 .programs__title {
