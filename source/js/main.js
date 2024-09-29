@@ -6,6 +6,7 @@ import { tabsInit } from './modules/tabs';
 import { accordionInit } from './modules/accordion';
 import { sliderReviews } from './modules/sliders/slider-reviews';
 import { selectInit } from './modules/custom-select';
+// import { renderPagination } from './modules/sliders/slider-news';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -18,5 +19,6 @@ window.addEventListener('DOMContentLoaded', () => {
     accordionInit();
     sliderReviews();
     selectInit();
+    // renderPagination();
   });
 });

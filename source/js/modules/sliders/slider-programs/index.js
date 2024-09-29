@@ -37,8 +37,8 @@ const sliderPrograms = () => {
         },
 
         1440: {
-          slidesPerView: 'auto',
-          spaceBetween: 120,
+          slidesPerView: 3,
+          spaceBetween: 32,
           allowTouchMove: true
         }
       },

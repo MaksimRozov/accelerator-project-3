@@ -43,14 +43,16 @@
 }
 
 .news__carousel .news__carousel-wrapper {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-auto-flow: column;
-  gap: 20px;
+  height: 690px;
 
-  @media (min-width: $tablet-width) {
-    gap: 30px;
-  }
+  // display: grid;
+  // grid-template-rows: 1fr 1fr;
+  // grid-auto-flow: column;
+  // gap: 20px;
+
+  // @media (min-width: $tablet-width) {
+  //   gap: 30px;
+  // }
 }
 
 .news__carousel .news__carousel-item {
@@ -70,7 +72,7 @@
   position: absolute;
   left: 15px;
   right: 15px;
-  bottom: 58px;
+  bottom: -36px;
   z-index: 1;
 }
 

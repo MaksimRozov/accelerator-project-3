@@ -36,8 +36,8 @@ const sliderReviews = () => {
         },
 
         1440: {
-          slidesPerView: 'auto',
-          spaceBetween: 120,
+          slidesPerView: 2,
+          spaceBetween: 32,
           allowTouchMove: true
         }
       },

@@ -5,6 +5,12 @@
   color: $white-color;
 }
 
+.grant__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
 .grant__title {
   color: $white-color;
   margin: 0;
