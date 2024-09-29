@@ -231,6 +231,14 @@ const initSliderNews = (element) => {
       }
     };
   }
+  const slideElement = element.querySelectorAll('.news__carousel-item');
+  slideElement.forEach((item, index) => {
+    if (index % 2 === 1) { // Четные элементы (индексы 1, 3, 5...)
+      const elementChild = item.querySelector('.card-second');
+
+      elementChild.classList.add('card-second--small');
+    }
+  });
 
   // Инициализация пагинации сразу после создания слайдера
   renderPagination();
