@@ -237,10 +237,13 @@ const initSliderNews = (element) => {
 };
 
 // Инициализация всех слайдеров на странице
-document.addEventListener('DOMContentLoaded', () => {
-  newsSwipers.forEach((element) => {
-    initSliderNews(element);
-  });
-});
+const addSliderNews = () => {
+  if (newsSwipers) {
+    newsSwipers.forEach((element) => {
+      initSliderNews(element);
+    });
+  }
+};
 
-export { initSliderNews };
+
+export { addSliderNews };
