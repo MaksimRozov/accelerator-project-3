@@ -75,5 +75,7 @@
 }
 
 .about__content {
-  display: flex;
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }

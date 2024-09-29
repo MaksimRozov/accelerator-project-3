@@ -11,7 +11,8 @@ const tabsInit = () => {
       const tabContentElements = parentById.querySelectorAll('.tabs__content');
       tabContentElements.forEach((element, index) => {
         if (index !== 0) {
-          element.style.display = 'none';
+          // element.style.opacity = '0';
+          element.classList.add('visually-hidden');
         }
       });
 
@@ -37,9 +38,12 @@ const tabsInit = () => {
             const contentId = itemContent.getAttribute('data-tab-content');
 
             if (contentId === activeTabId) {
-              itemContent.style.display = 'block';
+              // itemContent.style.opacity = '1';
+              itemContent.classList.remove('visually-hidden');
             } else {
-              itemContent.style.display = 'none';
+              // itemContent.style.opacity = '0';
+              itemContent.classList.add('visually-hidden');
+
             }
           });
         });
