@@ -32,7 +32,7 @@ const sliderPrograms = () => {
 
         768: {
           slidesPerView: 2.15,
-          spaceBetween: 30,
+          spaceBetween: 37,
           allowTouchMove: true
         },
 
