@@ -69,6 +69,10 @@
   padding: 25px 26px;
   padding-bottom: 23px;
 
+  br {
+    display: none;
+  }
+
   &::before {
     counter-increment: count-list;
     content: counter(count-list);
@@ -82,5 +86,22 @@
     line-height: 100%;
     text-transform: uppercase;
     text-align: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+    br {
+      display: block;
+    }
+
+    &::before {
+      width: 42px;
+      height: 41px;
+      left: -21px;
+      top: -15px;
+      font-size: 22px;
+    }
   }
 }
