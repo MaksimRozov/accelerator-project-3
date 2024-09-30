@@ -36,16 +36,19 @@
 
   @media (min-width: $tablet-width) {
     min-height: 56px;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 14px 30px;
 
     &::after {
       width: 46px;
       height: 46px;
-      top: 2px;
+      top: 4px;
     }
 
     &::before {
       right: 22px;
-      top: 22px;
+      top: 24px;
     }
   }
 }

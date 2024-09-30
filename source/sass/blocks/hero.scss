@@ -5,6 +5,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 32px;
+  }
+}
+
+.hero__header-menu {
+  position: absolute;
+  right: 15px;
+  top: 19px;
+
+  @media (min-width: $tablet-width) {
+    right: 45px;
+    top: 30px;
+  }
 }
 
 .hero__slider {
@@ -21,6 +36,10 @@
   gap: 12px;
   top: 10px;
   display: none;
+
+  @media (min-width: $tablet-width) {
+    top: 14px;
+  }
 }
 
 .hero__pagination-container {
@@ -41,6 +60,20 @@
     position: absolute;
     right: -10px;
     bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    border-radius: 20px 20px 0 0;
+    width: 100px;
+    height: 40px;
+
+    &::after {
+      width: 21px;
+      height: 25px;
+      background-size: 27px;
+      right: -20px;
+      bottom: 0;
+    }
   }
 }
 
@@ -69,5 +102,10 @@
   &:focus-visible {
     outline: none;
     background-image: url("../../__spritemap#sprite-dot-focus-view");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 12px;
+    height: 12px;
   }
 }

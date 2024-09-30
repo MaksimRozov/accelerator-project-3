@@ -1,7 +1,4 @@
 .menu {
-  position: absolute;
-  right: 15px;
-  top: 19px;
   transition: 0.3s;
 }
 
@@ -101,7 +98,7 @@
   text-align: center;
   color: $primary-color;
   width: 136px;
-  height: 54px;
+  min-height: 54px;
   transition: 0.3s;
   margin-bottom: 4px;
 
@@ -110,6 +107,10 @@
     transition: 0.3s;
     background-color: $primary-color;
     color: $white-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 56px;
   }
 }
 
