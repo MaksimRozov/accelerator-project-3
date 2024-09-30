@@ -1,5 +1,6 @@
 .news {
   padding-top: 50px;
+  padding-bottom: 106px;
 }
 
 .news__group-buttons {
@@ -7,7 +8,7 @@
   gap: 10px;
   overflow-x: auto;
   padding-left: 15px;
-  margin-bottom: 26px;
+  margin-bottom: 9px;
 
   @media (min-width: $tablet-width) {
     padding-left: 45px;
@@ -25,7 +26,9 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -42px;
+  bottom: -49px;
+  display: flex;
+  gap: 16px;
   z-index: 1;
 }
 
@@ -86,7 +89,7 @@
   position: absolute;
   left: 15px;
   right: 15px;
-  bottom: -36px;
+  bottom: -48px;
 }
 
 .news__carousel .news__pagination {
@@ -127,8 +130,8 @@
 }
 
 .news__button-pagination {
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 26px;
   background-color: transparent;
   color: $primary-color;
   border: none;
@@ -137,6 +140,7 @@
   text-align: center;
   border-radius: 50%;
   opacity: 0.5;
+  padding: 0;
 
   &--active {
     opacity: 1;
