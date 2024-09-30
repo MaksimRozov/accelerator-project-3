@@ -34,10 +34,14 @@
   }
 }
 
+.reviews-card__user {
+  margin-bottom: 16px;
+}
+
 .reviews-card__info {
   display: flex;
   gap: 25px;
-  margin-bottom: 27px;
+  margin-bottom: 23px;
 }
 
 .reviews-card__info-item {
