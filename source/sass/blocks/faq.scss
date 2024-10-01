@@ -2,10 +2,18 @@
   text-align: center;
   margin: 0;
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .faq {
   margin-top: -5px;
   padding-top: 50px;
   padding-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    // padding-top: 62px;
+  }
 }
