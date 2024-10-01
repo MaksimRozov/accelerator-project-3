@@ -7,7 +7,7 @@
   height: 100%;
 
   @media (min-width: $tablet-width) {
-    padding: 52px;
+    padding: 50px;
   }
 }
 
@@ -27,6 +27,8 @@
   }
 
   @media (min-width: $tablet-width) {
+    gap: 15px;
+
     span {
       font-size: 20px;
       line-height: 24px;
@@ -36,12 +38,20 @@
 
 .reviews-card__user {
   margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .reviews-card__info {
   display: flex;
   gap: 25px;
   margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .reviews-card__info-item {

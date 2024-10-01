@@ -10,7 +10,7 @@
   @media (min-width: $tablet-width) {
     top: auto;
     right: 45px;
-    bottom: -40px;
+    bottom: -62px;
   }
 }
 
@@ -20,7 +20,7 @@
   @media (min-width: $tablet-width) {
     display: block;
     top: auto;
-    bottom: -31px;
+    bottom: -52px;
     max-width: 562px;
     height: 2px;
 
@@ -40,6 +40,8 @@
 
   @media (min-width: $tablet-width) {
     padding-right: 0;
+    padding-top: 50px;
+    padding-bottom: 112px;
   }
 
   @media (min-width: $desktop-width) {
@@ -50,6 +52,10 @@
 .reviews__title {
   margin: 0;
   margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .reviews__heading {
@@ -63,6 +69,7 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 24px;
+    margin-bottom: 25px;
   }
 }
 
