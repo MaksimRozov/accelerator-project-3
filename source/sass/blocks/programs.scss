@@ -70,3 +70,17 @@
     margin-bottom: 43px;
   }
 }
+
+.programs__carousel .programs__slider-scrollbar {
+  top: auto;
+  max-width: 562px;
+
+  --swiper-scrollbar-bottom: -52px;
+  --swiper-scrollbar-sides-offset: 0;
+  --swiper-scrollbar-size: 2px;
+  --swiper-scrollbar-bg-color: rgba(49, 109, 194, 0.2);
+}
+
+.programs__carousel .programs__drag {
+  --swiper-scrollbar-drag-bg-color: #316dc2;
+}

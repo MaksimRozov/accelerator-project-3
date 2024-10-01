@@ -13,9 +13,11 @@
   scroll-padding-bottom: 0;
 
   @media (min-width: $tablet-width) {
-    padding-left: 45px;
+    padding-left: 47px;
     padding-right: 45px;
     overflow-x: unset;
+    gap: 7px;
+    margin-bottom: 30px;
   }
 }
 
@@ -28,6 +30,11 @@
   display: flex;
   gap: 16px;
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    bottom: -60px;
+    gap: 20px;
+  }
 }
 
 .news__button {
@@ -51,22 +58,24 @@
   @media (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 14px;
-    padding: 16px 22px;
+    padding: 14px 20px;
   }
 }
 
 .news__carousel .news__carousel-wrapper {
   height: 590px;
+
   justify-content: space-between;
 
   // display: grid;
   // grid-template-rows: 1fr 1fr;
   // grid-auto-flow: column;
-  // gap: 20px;
 
-  // @media (min-width: $tablet-width) {
-  //   gap: 30px;
-  // }
+  @media (min-width: $tablet-width) {
+    height: 729px;
+    justify-content: unset;
+    flex-direction: row;
+  }
 }
 
 .news__carousel .news__carousel-item {
@@ -87,6 +96,12 @@
   left: 15px;
   right: 15px;
   bottom: -48px;
+
+  @media (min-width: $tablet-width) {
+    left: 45px;
+    right: 45px;
+    bottom: -55px;
+  }
 }
 
 .news__carousel .news__pagination {
@@ -126,7 +141,7 @@
   margin-bottom: 24px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 28px;
+    margin-bottom: 30px;
   }
 }
 
@@ -147,5 +162,10 @@
     opacity: 1;
     background-color: $primary-color;
     color: $white-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 32px;
+    height: 32px;
   }
 }

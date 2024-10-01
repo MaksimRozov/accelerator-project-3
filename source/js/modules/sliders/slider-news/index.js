@@ -17,6 +17,7 @@ const initSliderNews = (element) => {
     slidesPerView: 2,
     grid: {
       rows: 2,
+      fill: 'column'
     },
     navigation: {
       nextEl: element.querySelector('.news__carousel-next'),
@@ -29,6 +30,10 @@ const initSliderNews = (element) => {
         spaceBetween: 15,
       },
       768: {
+        grid: {
+          rows: 2,
+          fill: 'row'
+        },
         slidesPerView: 2,
         spaceBetween: 30,
         allowTouchMove: true,

@@ -21,6 +21,7 @@ const sliderReviews = () => {
       pagination: {
         el: '.reviews__pagination',
         type: 'progressbar',
+        clickable: true
       },
       breakpoints: {
         320: {

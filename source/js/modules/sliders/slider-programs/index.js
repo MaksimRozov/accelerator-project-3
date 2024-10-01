@@ -1,7 +1,8 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 
 import 'swiper/css';
+import 'swiper/css/scrollbar';
 
 const programsSliderElement = document.querySelector('.programs__slider');
 
@@ -9,7 +10,7 @@ const sliderPrograms = () => {
   if (programsSliderElement) {
     // eslint-disable-next-line no-unused-vars
     const swiperPrograms = new Swiper(programsSliderElement, {
-      modules: [Navigation, Pagination],
+      modules: [Navigation, Pagination, Scrollbar],
       grabCursor: false,
       watchOverflow: true,
       speed: 1000,
@@ -19,10 +20,16 @@ const sliderPrograms = () => {
         prevEl: '.programs__carousel-prev',
         disabledClass: 'arrow-style-slider__button--disabled',
       },
-      pagination: {
-        el: '.programs__slider-pagination',
-        type: 'progressbar',
+      scrollbar: {
+        el: '.programs__slider-scrollbar',
+        draggable: true,
+        dragSize: 326,
+        dragClass: 'programs__drag swiper-scrollbar-drag'
       },
+      // pagination: {
+      //   el: '.programs__slider-pagination',
+      //   type: 'scrollbar',
+      // },
       breakpoints: {
         320: {
           slidesPerView: 1,
