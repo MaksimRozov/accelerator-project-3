@@ -32,7 +32,7 @@ const sliderReviews = () => {
 
         768: {
           slidesPerView: 1.28,
-          spaceBetween: 30,
+          spaceBetween: 32,
           allowTouchMove: true
         },
 
