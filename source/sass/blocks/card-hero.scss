@@ -19,6 +19,11 @@
 
   @media (min-width: $desktop-width) {
     min-height: 800px;
+
+    p {
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
 }
 
@@ -60,7 +65,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 79%;
+    width: 78%;
+    padding-left: 50px;
+    padding-top: 40px;
+    padding-bottom: 29px;
   }
 }
 
@@ -88,6 +96,12 @@
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 30px;
     padding-bottom: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: unset;
+    padding-left: 50px;
+    padding-right: 0;
   }
 }
 
@@ -135,6 +149,11 @@
     font-size: 36px;
     line-height: 44px;
   }
+
+  @media (min-width: $desktop-width) {
+    font-size: 54px;
+    line-height: 62px;
+  }
 }
 
 .card-hero__footer {
@@ -146,10 +165,18 @@
     width: 593px;
     gap: 43px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 774px;
+  }
 }
 
 .card-hero__button {
   @media (min-width: $tablet-width) {
     width: 198px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 13px;
   }
 }

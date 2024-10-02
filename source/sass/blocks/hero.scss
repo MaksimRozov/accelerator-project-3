@@ -20,6 +20,10 @@
     right: 45px;
     top: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    right: 100px;
+  }
 }
 
 .hero__slider {
