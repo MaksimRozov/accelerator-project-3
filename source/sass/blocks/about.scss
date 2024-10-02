@@ -46,6 +46,7 @@
     @media (min-width: $desktop-width) {
       font-size: 32px;
       line-height: 36px;
+      margin-bottom: 40px;
     }
   }
 
@@ -57,10 +58,20 @@
       padding-right: 147px;
       margin-bottom: 40px;
     }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 0;
+      margin-bottom: 51px;
+    }
   }
 
   @media (min-width: $tablet-width) {
     padding-top: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 69px;
+    padding-bottom: 60px;
   }
 }
 
@@ -85,6 +96,10 @@
     padding-left: 39px;
     padding-bottom: 50px;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 484px 484px;
+  }
 }
 
 .about__button {
@@ -99,6 +114,7 @@
 
 .about__content {
   @media (min-width: $desktop-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 498px;
   }
 }

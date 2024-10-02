@@ -55,6 +55,7 @@
     @media (min-width: $desktop-width) {
       font-size: 26px;
       line-height: 30px;
+      padding-right: 175px;
     }
   }
 }
@@ -62,6 +63,19 @@
 .card--star {
   &::before {
     background-image: url("../../__spritemap#sprite-star-view");
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 171px 1fr;
+    gap: 30px;
+    padding: 30px 41px;
+    align-items: center;
+
+    p span {
+      padding-right: 0;
+      margin-bottom: 0;
+    }
   }
 }
 
