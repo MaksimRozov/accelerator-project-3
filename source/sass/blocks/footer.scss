@@ -1,6 +1,10 @@
 .footer {
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+  }
 }
 
 .footer__menu {
@@ -53,6 +57,7 @@
 
   @media (min-width: $tablet-width) {
     margin-left: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -70,9 +75,10 @@
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    width: 98px;
+    width: 128px;
     margin: 0;
     margin-left: auto;
+    align-self: flex-start;
   }
 }
 
@@ -95,6 +101,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     gap: 98px;
+    margin-bottom: 5px;
   }
 }
 
