@@ -3,6 +3,11 @@
 
   display: grid;
   gap: 10px;
+
+  @media (min-width: $desktop-width) {
+    width: 1028px;
+    margin: 0 auto;
+  }
 }
 
 .accordion__item {
@@ -49,6 +54,19 @@
   @media (min-width: $tablet-width) {
     padding: 30px;
     border-radius: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px;
+
+    h3 {
+      font-size: 28px;
+      line-height: 34px;
+
+      br {
+        display: none;
+      }
+    }
   }
 }
 

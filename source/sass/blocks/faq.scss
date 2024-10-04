@@ -1,3 +1,13 @@
+.faq {
+  margin-top: -5px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 71px;
+  }
+}
+
 .faq__title {
   text-align: center;
   margin: 0;
@@ -6,14 +16,8 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
   }
-}
 
-.faq {
-  margin-top: -5px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-
-  @media (min-width: $tablet-width) {
-    // padding-top: 62px;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 71px;
   }
 }
