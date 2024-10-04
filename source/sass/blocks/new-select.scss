@@ -11,6 +11,10 @@
   @media (min-width: $tablet-width) {
     width: 100%;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 92%;
+  }
 }
 
 .new-select__list {
