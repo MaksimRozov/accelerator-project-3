@@ -11,6 +11,11 @@
     padding-right: 52px;
     width: 560px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 604px;
+    padding-right: 46px;
+  }
 }
 
 .reviews-card__avatar {
@@ -33,6 +38,13 @@
 
     span {
       font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    span {
+      font-size: 18px;
       line-height: 24px;
     }
   }
