@@ -5,6 +5,10 @@
   @media (min-width: $tablet-width) {
     padding-bottom: 118px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 59px;
+  }
 }
 
 .news__group-buttons {
@@ -22,6 +26,13 @@
     overflow-x: unset;
     gap: 7px;
     margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+    gap: 30px;
   }
 }
 
@@ -63,6 +74,14 @@
     font-size: 14px;
     line-height: 14px;
     padding: 14px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 14px 0;
+    width: 120px;
+    min-height: 46px;
   }
 }
 
@@ -146,6 +165,10 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 41px;
   }
 }
 

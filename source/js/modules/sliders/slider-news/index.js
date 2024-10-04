@@ -39,8 +39,12 @@ const initSliderNews = (element) => {
         allowTouchMove: true,
       },
       1440: {
+        grid: {
+          rows: 1,
+          fill: 'column'
+        },
         slidesPerView: 3,
-        spaceBetween: 120,
+        spaceBetween: 32,
         allowTouchMove: true,
       },
     },
