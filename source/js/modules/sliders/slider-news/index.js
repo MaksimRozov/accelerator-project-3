@@ -30,20 +30,22 @@ const initSliderNews = (element) => {
         spaceBetween: 15,
       },
       768: {
+        allowTouchMove: true,
+        slidesPerGroup: 2,
+        slidesPerView: 2,
         grid: {
           rows: 2,
           fill: 'row'
         },
-        slidesPerView: 2,
         spaceBetween: 30,
-        allowTouchMove: true,
       },
       1440: {
         grid: {
           rows: 1,
           fill: 'column'
         },
-        slidesPerView: 3,
+        slidesPerView: 'auto',
+        slidesPerGroup: 3,
         spaceBetween: 32,
         allowTouchMove: true,
       },
@@ -143,6 +145,16 @@ const addSliderNews = () => {
     });
   }
 };
+
+if (window.innerWidth > 1439) {
+  const cardNews = document.querySelectorAll('.card-second--news');
+  cardNews.forEach((element, index) => {
+    if (index === 0 || (index + 1) % 4 === 0) {
+      element.classList.add('card-second--large');
+
+    }
+  });
+}
 
 
 export { addSliderNews };
