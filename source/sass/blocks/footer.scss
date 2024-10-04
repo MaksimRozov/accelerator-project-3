@@ -5,6 +5,10 @@
   @media (min-width: $tablet-width) {
     padding-top: 40px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 61px;
+  }
 }
 
 .footer__menu {
@@ -20,6 +24,10 @@
 
   @media (min-width: $tablet-width) {
     column-gap: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 31px;
   }
 }
 
@@ -40,6 +48,12 @@
   font-size: 12px;
   line-height: 117%;
   color: $text-color;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
 }
 
 .footer__info-politics {
@@ -59,10 +73,24 @@
     margin-left: 0;
     padding-bottom: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+    margin: 0;
+    margin-left: auto;
+    font-size: 14px;
+    line-height: 18px;
+    padding-bottom: 2px;
+  }
 }
 
 .footer__copy {
   opacity: 0.6;
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .footer__social {
@@ -79,6 +107,14 @@
     margin: 0;
     margin-left: auto;
     align-self: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    right: 0;
+    bottom: 67px;
+    width: 148px;
+    gap: 20px;
   }
 }
 
@@ -103,11 +139,16 @@
     gap: 98px;
     margin-bottom: 5px;
   }
+
+  @media (min-width: $desktop-width) {
+    gap: 52px;
+  }
 }
 
 .footer__bottom {
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    position: relative;
   }
 }
