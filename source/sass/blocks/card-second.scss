@@ -290,6 +290,39 @@
     mask-image: url("../../__spritemap#sprite-arrow-right-top-view");
     background-color: #ffffff;
   }
+
+  &:hover {
+    background-color: $white-color;
+
+    &::before {
+      background-color: $primary-color;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible {
+    background-color: $primary-color;
+
+    &::before {
+      background-color: $white-color;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:active {
+    background-color: $white-color;
+
+    &::before {
+      background-color: $primary-color;
+      transform: rotate(45deg);
+      opacity: 0.7;
+    }
+  }
 }
 
 .card-second--large .card-second__content-text {

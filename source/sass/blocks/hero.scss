@@ -5,6 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  left: 0;
+  right: 0;
 
   @media (min-width: $tablet-width) {
     padding-top: 32px;
@@ -85,27 +87,73 @@
   display: flex;
 }
 
+// .hero__dots {
+//   border-radius: 50%;
+//   border: none;
+//   width: 8px;
+//   height: 8px;
+//   padding: 0;
+//   background-color: transparent;
+//   background-image: url("../../__spritemap#sprite-dot-default-view");
+//   cursor: pointer;
+
+//   &--active {
+//     background-image: url("../../__spritemap#sprite-dot-active-view");
+//   }
+
+//   &:hover:not(:disabled):not(.disabled) {
+//     background-image: url("../../__spritemap#sprite-dot-hover-view");
+//   }
+
+//   &:active {
+//     background-image: url("../../__spritemap#sprite-dot-active-view");
+//   }
+
+//   &:focus-visible,
+//   &:focus {
+//     outline: none;
+//     background-image: url("../../__spritemap#sprite-dot-focus-view");
+//   }
+
+//   @media (min-width: $tablet-width) {
+//     width: 12px;
+//     height: 12px;
+//   }
+// }
+
 .hero__dots {
-  border-radius: 50%;
-  border: none;
+  display: flex;
+  flex-shrink: 0;
   width: 8px;
   height: 8px;
-  padding: 0;
+  border: 2px solid $primary-color;
+  border-radius: 50%;
   background-color: transparent;
-  background-image: url("../../__spritemap#sprite-dot-default-view");
+  transition: background-color 0.3;
   cursor: pointer;
-
-  &--active {
-    background-image: url("../../__spritemap#sprite-dot-active-view");
-  }
+  padding: 0;
 
   &:hover {
-    background-image: url("../../__spritemap#sprite-dot-hover-view");
+    border: 2px solid $white-color;
+    background-color: $primary-color;
+    opacity: 0.7;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
   }
 
   &:focus-visible {
-    outline: none;
-    background-image: url("../../__spritemap#sprite-dot-focus-view");
+    background-color: $primary-color;
+    border: none;
+    opacity: 1;
+  }
+
+  &--active,
+  &:active {
+    background-color: $state-active-color;
+    border: none;
   }
 
   @media (min-width: $tablet-width) {

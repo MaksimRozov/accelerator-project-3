@@ -1,22 +1,16 @@
 const menuHeader = document.querySelector('.menu__header');
-const buttonBurger = menuHeader.querySelector('.menu__burger');
 const menuList = document.querySelector('.menu__list');
 const bodyElement = document.body;
 
-
 const openMenu = () => {
   menuHeader.classList.add('menu__header--open');
-  buttonBurger.classList.add('menu__burger--open');
   menuList.classList.add('menu__list--open');
-  bodyElement.classList.add('page__body--lock');
   bodyElement.classList.add('page__body--overlay');
 };
 
 const closeMenu = () => {
   menuHeader.classList.remove('menu__header--open');
-  buttonBurger.classList.remove('menu__burger--open');
   menuList.classList.remove('menu__list--open');
-  bodyElement.classList.remove('page__body--lock');
   bodyElement.classList.remove('page__body--overlay');
   document.querySelectorAll('.menu__dropdown').forEach((submenu) => {
     submenu.style.maxHeight = '0';
@@ -34,7 +28,6 @@ const onToggleMenu = () => {
     closeMenu();
   }
 };
-
 
 const initMenu = () => {
   menuHeader.addEventListener('click', onToggleMenu);
@@ -56,7 +49,6 @@ document.querySelectorAll('.menu__link--dropdown').forEach((item) => {
   });
 
 });
-
 
 document.addEventListener('click', (event) => {
   const isClickInsideMenu = event.target.closest('.menu');
