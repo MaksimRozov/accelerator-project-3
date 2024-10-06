@@ -90,6 +90,60 @@
   }
 }
 
+.button--blue:hover:not(:disabled):not(.button--disabled):not(:active) {
+  background-color: $white-color;
+  color: $primary-color;
+
+  &::before {
+    transition: all 0.3s;
+    transform: rotate(45deg);
+    background-color: $white-color;
+  }
+
+  &::after {
+    transition: all 0.3s;
+    background-color: $primary-color;
+  }
+}
+
+.button--blue:focus,
+.button--blue:focus-visible {
+  outline: none;
+}
+
+.button--blue:focus-visible {
+  border: 1px solid $white-color;
+  color: $white-color;
+  background-color: $primary-color;
+
+  &::after {
+    background-color: $white-color;
+    flex-basis: 34px;
+  }
+
+  &::before {
+    mask-image: url("../../__spritemap#sprite-arrow-right-top-view");
+    background-color: $primary-color;
+    transform: rotate(45deg);
+  }
+}
+
+.button--blue:active {
+  background-color: $white-color;
+  color: hsla(215, 60%, 48%, 0.7);
+
+  &::before {
+    transform: rotate(45deg);
+    background-color: $white-color;
+    opacity: 0.7;
+  }
+
+  &::after {
+    transition: all 0.3s;
+    background-color: $primary-color;
+  }
+}
+
 .button--light:hover:not(:disabled):not(.button--disabled) {
   background-color: $primary-color;
   color: $white-color;
@@ -101,14 +155,13 @@
   }
 
   &::before {
-    mask-image: url("../../__spritemap#sprite-arrow-right-top-view");
     background-color: $primary-color;
     transition: all 0.3s;
     transform: rotate(45deg);
   }
 }
 
-.button--light:focus:focus-visible:not(:disabled):not(.button--disabled),
+.button--light:focus:not(:disabled):not(.button--disabled),
 .button--light:focus-visible:not(:disabled):not(.button--disabled) {
   outline: none;
 

@@ -5,6 +5,8 @@ import 'swiper/css';
 import 'swiper/css/grid';
 
 const newsSwipers = document.querySelectorAll('.news__carousel');
+const links = document.querySelectorAll('.card-second__content-link');
+
 
 // Функция для инициализации Swiper
 const initSliderNews = (element) => {
@@ -81,6 +83,7 @@ const initSliderNews = (element) => {
     for (let i = startSlide; i <= endSlide; i++) {
       const button = document.createElement('button');
       button.setAttribute('type', 'button');
+      button.setAttribute('tabindex', '0');
       button.classList.add('news__button-pagination');
       button.textContent = i;
       button.className = (i === currentSlide) ? 'news__button-pagination news__button-pagination--active' : 'news__button-pagination';
@@ -132,6 +135,16 @@ const initSliderNews = (element) => {
       elementChild.classList.add('card-second--small');
     }
   });
+
+  const setTabIndex = (activeIndex) => {
+    links.forEach((link, index) => {
+      link.setAttribute('tabindex', index === activeIndex ? '0' : '-1');
+    });
+  };
+
+
+  // Устанавливаем tabindex для первого слайда по умолчанию
+  setTabIndex(sliderNews.activeIndex);
 
   // Инициализация пагинации сразу после создания слайдера
   renderPagination();

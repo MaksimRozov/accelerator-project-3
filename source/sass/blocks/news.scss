@@ -68,9 +68,25 @@
   padding: 10px 14px;
   cursor: pointer;
 
+  &:hover:not(:disabled):not(.news__button--disabled) {
+    opacity: 1;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    opacity: 1;
+    background-color: $white-color;
+  }
+
   &--active {
     border: 2px solid $primary-color;
     opacity: 1;
+  }
+
+  &:disabled {
+    color: $state-disabled-color;
+    pointer-events: none;
   }
 
   @media (min-width: $tablet-width) {
@@ -198,6 +214,27 @@
   border-radius: 50%;
   opacity: 0.5;
   padding: 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+    border: 2px solid $primary-color;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    opacity: 1;
+    border: 2px solid $primary-color;
+    background-color: $white-color;
+  }
+
+  &:active {
+    opacity: 1;
+    border: 2px solid $state-active-color;
+    background-color: $state-active-color;
+    color: $white-color;
+  }
 
   &--active {
     opacity: 1;
@@ -209,4 +246,11 @@
     width: 32px;
     height: 32px;
   }
+}
+
+.news__button-pagination--active:focus-visible {
+  opacity: 1;
+  border: 2px solid $primary-color;
+  background-color: $white-color;
+  color: $primary-color;
 }

@@ -16,6 +16,36 @@
   border: 2px solid $primary-color;
   border-radius: 14px;
   color: $primary-color;
+  cursor: pointer;
+
+  &:hover:not(:disabled):not(.accordion__item--disabled):not(:active):not(.accordion__item--active),
+  &:focus-visible:not(.accordion__item--active) {
+    background-color: $white-color;
+    outline: none;
+
+    .accordion__button {
+      background-color: $white-color;
+      border: 1px solid $primary-color;
+    }
+
+    .accordion__button::after {
+      background-color: $primary-color;
+    }
+  }
+
+  &:active:not(.accordion__item--active) {
+    background-color: $white-color;
+    color: $state-active-color;
+
+    .accordion__button {
+      background-color: $state-active-color;
+      border: 1px solid $primary-color;
+    }
+
+    .accordion__button::after {
+      background-color: $white-color;
+    }
+  }
 
   h3 {
     font-weight: 400;
@@ -70,6 +100,39 @@
   }
 }
 
+.accordion__item--active {
+  background-color: $primary-color;
+  color: $white-color;
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    border: 2px solid $white-color;
+
+    .accordion__button {
+      background-color: $primary-color;
+      border-color: $white-color;
+    }
+
+    .accordion__button::after {
+      background-color: $white-color;
+    }
+  }
+
+  &:active {
+    background-color: $state-active-color;
+
+    .accordion__button {
+      background-color: $white-color;
+      border-color: $primary-color;
+    }
+
+    .accordion__button::after {
+      background-color: $state-active-color;
+    }
+  }
+}
+
 .accordion__header {
   display: grid;
   grid-template-columns: 1fr 38px;
@@ -118,11 +181,6 @@
     height: 40px;
     align-self: flex-start;
   }
-}
-
-.accordion__item--active {
-  background-color: $primary-color;
-  color: $white-color;
 }
 
 .accordion__item--active .accordion__button {

@@ -16,16 +16,13 @@ const accordionInit = () => {
       const accordionItemsElements = parentById.querySelectorAll('.accordion__item');
 
       accordionItemsElements.forEach((item, index) => {
-
-        const itemHeader = item.querySelector('.accordion__header');
-        // const headerButton = item.querySelector('.accordion__button');
         const content = item.querySelector('.accordion__content');
 
         if (parentId === 'accordion-1' && index === ACTIVE_ACCORDION_DEFAULT) {
           item.classList.add(ActiveClass.ACCORDION_ACTIVE);
           content.style.maxHeight = `${content.scrollHeight}px`;
         }
-        itemHeader.addEventListener('click', () => {
+        item.addEventListener('click', () => {
           if (!item.classList.contains(ActiveClass.ACCORDION_ACTIVE)) {
             item.classList.add(ActiveClass.ACCORDION_ACTIVE);
             content.style.maxHeight = `${content.scrollHeight}px`;

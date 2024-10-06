@@ -24,6 +24,13 @@
   }
 }
 
+.form__error-text {
+  color: $state-error-color;
+  order: -1;
+  position: absolute;
+  top: 76px;
+}
+
 .form__container {
   padding-left: 10px;
   padding-right: 10px;
@@ -149,10 +156,35 @@
   border-radius: 8px;
   width: 100%;
   height: 50px;
+  color: $white-color;
+  padding-left: 10px;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    border: 1px solid $white-color;
+    outline: none;
+
+    ~ label {
+      opacity: 1;
+    }
+  }
+
+  &:disabled {
+    border: 1px solid $white-color;
+    background-color: hsla(0, 0%, 100%, 0.2);
+    pointer-events: none;
+    opacity: 0.4;
+
+    ~ label {
+      opacity: 0.6;
+    }
+  }
 
   &--textarea {
     min-height: 94px;
     vertical-align: top;
+    padding: 10px;
 
     @media (min-width: $tablet-width) {
       min-height: 88px;
@@ -176,8 +208,18 @@
   }
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition:
+    background-color 600000s 0s,
+    color 600000s 0s;
+}
+
 .form__item {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 19px;
@@ -220,6 +262,54 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
+
+  &:hover {
+    .form__check-custom {
+      background-color: $primary-color;
+      border: 1px solid $white-color;
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.form__check-input:focus-visible + .form__check-custom {
+  background-color: $primary-color;
+  border: 1px solid $white-color;
+}
+
+.form__check-input:checked:focus-visible + .form__check-custom {
+  background-color: $primary-color;
+  border: 1px solid $white-color;
+
+  &::after {
+    background-color: $white-color;
+  }
+}
+
+.form__check-input:disabled {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.form__check-label:has(.form__check-input:disabled) {
+  pointer-events: none;
+}
+
+.form__check-input:disabled + .form__check-custom {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.form__check-input:checked:disabled + .form__check-custom {
+  background-color: $state-disabled-color;
+
+  &::after {
+    background-color: $white-color;
+    opacity: 0.7;
+  }
 }
 
 .form__check-custom {
@@ -227,18 +317,39 @@
   height: 20px;
   position: relative;
   background-color: #ffffff;
-  display: block;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-size: 10px 8px;
+    background-position: center;
+  }
 
   @media (min-width: $tablet-width) {
     width: 20px;
   }
 }
 
-.form__check-input[type="checkbox"]:checked + .form__check-custom {
-  background-image: url("../../__spritemap#sprite-check-view");
-  background-repeat: no-repeat;
-  background-size: 10px 8px;
-  background-position: center;
+.form__check-input:checked + .form__check-custom {
+  position: relative;
 
+  &::after {
+    mask-image: url("../../__spritemap#sprite-check-view");
+    background-repeat: no-repeat;
+    background-size: 10px 8px;
+    background-position: center;
+    background-color: $primary-color;
+  }
+}
+
+.form__check-label:hover:not(:disabled) .form__check-input:checked + .form__check-custom::after {
   background-color: $white-color;
 }

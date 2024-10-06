@@ -1003,56 +1003,46 @@
     <section class="faq container" data-test="FAQ">
       <h2 class="faq__title title">Вопросы и ответы</h2>
       <ul class="accordion">
-        <li class="accordion__item">
+        <li class="accordion__item" tabindex="0">
           <div class="accordion__header">
             <h3>Кто организатор? Какие сроки у программы?</h3>
-            <button class="accordion__button accordion__button--active" type="button">
-              <span class="visually-hidden">Открыть</span>
-            </button>
+            <span class="accordion__button"></span>
           </div>
           <div class="accordion__content">
             <p>Организатором программы является проект «Стажировка» в сотрудничестве с образовательными учреждениями. Сроки программы обмена могут варьироваться от одного семестра до года.</p>
           </div>
         </li>
-        <li class="accordion__item">
+        <li class="accordion__item" tabindex="0">
           <div class="accordion__header">
             <h3>Что такое грант на обучение?</h3>
-            <button class="accordion__button" type="button">
-              <span class="visually-hidden">Открыть</span>
-            </button>
+            <span class="accordion__button"></span>
           </div>
           <div class="accordion__content">
             <p>Грант на обучение — это финансовая поддержка, которую предоставляет организатор программы обмена студентами для оплаты учебных расходов.</p>
           </div>
         </li>
-        <li class="accordion__item">
+        <li class="accordion__item" tabindex="0">
           <div class="accordion__header">
             <h3>Как определяется стоимость программы?</h3>
-            <button class="accordion__button" type="button">
-              <span class="visually-hidden">Открыть</span>
-            </button>
+            <span class="accordion__button"></span>
           </div>
           <div class="accordion__content">
             <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
           </div>
         </li>
-        <li class="accordion__item">
+        <li class="accordion__item" tabindex="0">
           <div class="accordion__header">
             <h3>Признаётся ли учёба в рамках проекта<br> для дальнейшего обучения?</h3>
-            <button class="accordion__button" type="button">
-              <span class="visually-hidden">Открыть</span>
-            </button>
+            <span class="accordion__button"></span>
           </div>
           <div class="accordion__content">
             <p>Студенты, участвующие в проекте, могут использовать полученные знания и навыки в своей будущей профессиональной деятельности или продолжить обучение в высших учебных заведениях. Кроме того, многие университеты и колледжи предоставляют кредиты за участие в программе обмена студентами.</p>
           </div>
         </li>
-        <li class="accordion__item">
+        <li class="accordion__item" tabindex="0">
           <div class="accordion__header">
             <h3>Как выглядит полный процесс регистрации на программу «Стажировка»?</h3>
-            <button class="accordion__button" type="button">
-              <span class="visually-hidden">Открыть</span>
-            </button>
+            <span class="accordion__button"></span>
           </div>
           <div class="accordion__content">
             <p>Процесс регистрации на программу обмена включает выбор университета-партнера и программы обмена, общение с координатором программы, заполнение заявления и предоставление необходимых документов, прохождение интервью, оформление визы, жилья и страховки, обучение по безопасности за границей и подписание договора об участии в программе. Подробнее можно узнать позвонив в центр.</p>
@@ -1181,27 +1171,30 @@
             <h2 class="form__title">Напишите нам</h2>
             <p class="form__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
             <div class="form__wrapper">
-              <form action="https://echo.htmlacademy.ru" method="post">
+              <form class="form__form-block" action="https://echo.htmlacademy.ru" method="post">
                 <div class="form__item">
+                  <input class="form__input form__input--main" type="text" id="name" name="name">
                   <label class="form__label" for="name">Имя</label>
-                  <input class="form__input" type="text" id="name" name="name" required>
+                  <div class="form__error-text"></div>
                 </div>
                 <div class="form__item">
+                  <input class="form__input form__input--main" type="tel" maxlength="18" id="phone" name="phone">
                   <label class="form__label" for="phone">Телефон</label>
-                  <input class="form__input" type="tel" id="phone" name="phone" required>
+                  <div class="form__error-text"></div>
                 </div>
                 <div class="form__item">
+                  <textarea class="form__input form__input--main form__input--textarea" id="message" name="message"></textarea>
                   <label class="form__label" for="message">Ваше сообщение</label>
-                  <textarea class="form__input form__input--textarea" id="message" name="message"></textarea>
                 </div>
                 <div class="form__item">
-                  <label class="form__label" for="city-select">Выберите город</label>
                   <select class="form__select" name="city" id="city-select">
                     <option value="">&nbsp;</option>
-                    <option value="Saint-Petersburg1">Санкт-Петербург1</option>
-                    <option value="Saint-Petersburg2">Санкт-Петербург2</option>
-                    <option value="Saint-Petersburg3">Санкт-Петербург3</option>
+                    <option value="Saint-Petersburg">Санкт-Петербург</option>
+                    <option value="Saint-Petersburg">Санкт-Петербург</option>
+                    <option value="Saint-Petersburg">Санкт-Петербург</option>
                   </select>
+                  <label class="form__label" for="city-select">Выберите город</label>
+
                 </div>
                 <div class="form__item">
                   <label class="form__check-label">
