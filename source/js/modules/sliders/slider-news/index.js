@@ -11,9 +11,7 @@ const links = document.querySelectorAll('.card-second__content-link');
 // Функция для инициализации Swiper
 const initSliderNews = (element) => {
   const newsSwiper = element.querySelector('.news__swiper');
-  let currentSlide = 1; // Текущий слайд для этого слайдера
-
-  // Инициализация Swiper
+  let currentSlide = 1;
   const sliderNews = new Swiper(newsSwiper, {
     modules: [Navigation, Grid, Pagination],
     slidesPerView: 2,

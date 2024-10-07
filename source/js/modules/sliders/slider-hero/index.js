@@ -18,6 +18,7 @@ const sliderHero = () => {
       slidesPerView: 1,
       watchOverflow: true,
       speed: 300,
+      autoHeight: true,
       loop: true,
       pagination: {
         el: '.hero__pagination',

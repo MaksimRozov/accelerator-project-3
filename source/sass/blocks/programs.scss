@@ -83,15 +83,24 @@
 }
 
 .programs__carousel .programs__slider-scrollbar {
-  top: auto;
-  max-width: 562px;
+  display: none;
 
-  --swiper-scrollbar-bottom: -52px;
-  --swiper-scrollbar-sides-offset: 0;
-  --swiper-scrollbar-size: 2px;
-  --swiper-scrollbar-bg-color: rgba(49, 109, 194, 0.2);
+  @media (min-width: $tablet-width) {
+    top: auto;
+
+    display: block;
+    max-height: 2px;
+    max-width: 90%;
+
+    --swiper-scrollbar-bottom: -52px;
+    --swiper-scrollbar-sides-offset: 0%;
+    --swiper-scrollbar-size: 2px;
+    --swiper-scrollbar-bg-color: rgba(49, 109, 194, 0.2);
+  }
 }
 
 .programs__carousel .programs__drag {
-  --swiper-scrollbar-drag-bg-color: #316dc2;
+  background-color: #316dc2;
+
+  height: 100%;
 }

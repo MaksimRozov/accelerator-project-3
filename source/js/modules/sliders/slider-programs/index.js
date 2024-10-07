@@ -11,8 +11,6 @@ const sliderPrograms = () => {
     // eslint-disable-next-line no-unused-vars
     const swiperPrograms = new Swiper(programsSliderElement, {
       modules: [Navigation, Pagination, Scrollbar],
-      grabCursor: false,
-      watchOverflow: true,
       speed: 1000,
       loop: false,
       navigation: {
@@ -24,12 +22,9 @@ const sliderPrograms = () => {
         el: '.programs__slider-scrollbar',
         draggable: true,
         dragSize: 326,
-        dragClass: 'programs__drag swiper-scrollbar-drag'
+        dragClass: 'programs__drag'
       },
-      // pagination: {
-      //   el: '.programs__slider-pagination',
-      //   type: 'scrollbar',
-      // },
+
       breakpoints: {
         320: {
           slidesPerView: 1,

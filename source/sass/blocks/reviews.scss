@@ -90,3 +90,21 @@
     margin: 0;
   }
 }
+
+.reviews__drag-element {
+  height: 2px;
+  background-color: #316dc2;
+}
+
+.reviews__slider-scrollbar {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    max-height: 2px;
+    max-width: 90%;
+
+    --swiper-scrollbar-bottom: -52px;
+    --swiper-scrollbar-sides-offset: 0%;
+  }
+}
