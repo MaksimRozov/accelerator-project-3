@@ -11,7 +11,7 @@ const selectInit = () => {
     wrapper.appendChild(selectElement);
 
     const newSelectHead = document.createElement('div');
-    newSelectHead.classList.add('new-select');
+    newSelectHead.classList.add('form__select', 'new-select', 'form__valid');
     newSelectHead.setAttribute('tabindex', '0'); // Позволяет элементу получать фокус
     newSelectHead.textContent = selectedOption ? selectedOption.textContent : '';
     wrapper.appendChild(newSelectHead);
@@ -38,7 +38,7 @@ const selectInit = () => {
 
     const toggleDropdown = () => {
       if (!newSelectHead.classList.contains('new-select--on')) {
-        newSelectHead.classList.add('new-select--on');
+        newSelectHead.classList.add('new-select--on', 'form__select--on');
         newSelectList.style.display = 'block';
         setTimeout(() => {
           newSelectList.style.opacity = 1;
@@ -49,7 +49,7 @@ const selectInit = () => {
     };
 
     function closeDropdown() {
-      newSelectHead.classList.remove('new-select--on');
+      newSelectHead.classList.remove('new-select--on', 'form__select--on');
       newSelectList.style.display = 'none';
     }
 

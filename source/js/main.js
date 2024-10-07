@@ -7,6 +7,7 @@ import { accordionInit } from './modules/accordion';
 import { sliderReviews } from './modules/sliders/slider-reviews';
 import { selectInit } from './modules/custom-select';
 import { validateForm } from './modules/form';
+import { modalInit } from './modules/modal';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -20,5 +21,6 @@ window.addEventListener('DOMContentLoaded', () => {
     selectInit();
     addSliderNews();
     validateForm();
+    modalInit();
   });
 });

@@ -43,15 +43,22 @@ const validateNameInput = (input) => {
 const validateCheckInput = (input) => {
   const formCustom = document.querySelector('.form__check-custom');
 
-  if (!input.checked) { // Проверяем, что чекбокс не отмечен
+  if (!input.checked) {
     formCustom.classList.add('input-error');
-    // showErrorMessage(input, ErrorMassage.FIELD_REQUIRED); // Предполагается, что эта функция определена
   } else {
-    formCustom.classList.remove('input-error'); // Убираем ошибку, если чекбокс отмечен
-    // hideErrorMessage(input); // Скрываем сообщение об ошибке
+    formCustom.classList.remove('input-error');
   }
 };
 
+const validateMessageInput = (input) => {
+  const value = input.value.trim();
+  if (value === '') {
+    showErrorMessage(input, ErrorMassage.FIELD_REQUIRED);
+  } else {
+    hideErrorMessage(input);
+  }
+
+};
 
 const resetError = () => {
   itemsInputElement.forEach((input) => {
@@ -68,4 +75,4 @@ const resetError = () => {
   });
 };
 
-export { hideErrorMessage, validatePhoneInput, validateNameInput, resetError, validateCheckInput };
+export { hideErrorMessage, validatePhoneInput, validateNameInput, resetError, validateCheckInput, validateMessageInput };

@@ -3,11 +3,10 @@
   padding: 15px;
   padding-top: 16px;
   padding-bottom: 27px;
-
   background-color: $primary-color;
   margin-left: auto;
   margin-right: auto;
-  color: $white-color;
+  color: $beige-color;
 
   @media (min-width: $tablet-width) {
     width: 442px;
@@ -28,7 +27,7 @@
   color: $state-error-color;
   order: -1;
   position: absolute;
-  top: 76px;
+  bottom: -20px;
 }
 
 .form__container {
@@ -116,7 +115,6 @@
 }
 
 .form__description {
-  color: $beige-color;
   margin: 0;
   margin-bottom: 20px;
 
@@ -135,7 +133,6 @@
 .form__label {
   font-size: 12px;
   line-height: 14px;
-  color: $beige-color;
   opacity: 0.8;
   margin-bottom: 12px;
   display: block;
@@ -321,6 +318,7 @@ input:-webkit-autofill:focus {
   cursor: pointer;
   display: flex;
   align-items: center;
+  border-radius: 2px;
   justify-content: center;
 
   &::after {
@@ -352,4 +350,84 @@ input:-webkit-autofill:focus {
 
 .form__check-label:hover:not(:disabled) .form__check-input:checked + .form__check-custom::after {
   background-color: $white-color;
+}
+
+.form--modal {
+  background-color: $white-color;
+  color: $text-color;
+  padding-top: 36px;
+  padding-bottom: 39px;
+  position: relative;
+
+  .form__input {
+    border: 1px solid rgba(72, 72, 72, 0.3);
+    height: 44px;
+    color: $text-color;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      border: 1px solid rgba(72, 72, 72, 1);
+    }
+
+    &:disabled {
+      background-color: rgba(169, 175, 183, 0.2);
+      border: 1px solid rgba(169, 175, 183, 0.5);
+    }
+  }
+
+  .form__title {
+    color: $primary-color;
+    text-align: center;
+  }
+
+  .form__description {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .form__select {
+    border: 1px solid rgba(72, 72, 72, 0.3);
+    height: 44px;
+    padding: 12px 21px 12px 23px;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      border: 1px solid rgba(72, 72, 72, 1);
+    }
+  }
+
+  .form__select::after {
+    background-color: $text-color;
+  }
+
+  .form__check-custom {
+    border-color: $primary-color;
+    background-color: $primary-color;
+    width: 25px;
+    height: 19px;
+  }
+
+  .form__label {
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 8px;
+  }
+
+  .form__item {
+    margin-bottom: 16px;
+  }
+
+  .form__button {
+    margin-top: 23px;
+  }
+
+  .new-select__list {
+    border: 1px solid $text-color;
+  }
+
+  .form__select--on {
+    border: 1px solid $text-color;
+  }
 }

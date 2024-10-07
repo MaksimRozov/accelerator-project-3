@@ -1,4 +1,4 @@
-import { validatePhoneInput, validateNameInput, resetError, validateCheckInput } from './utils';
+import { validatePhoneInput, validateNameInput, resetError, validateCheckInput, validateMessageInput } from './utils';
 import { formContentElement, formElement, itemsInputElement, ErrorClass, phoneElement } from './variables';
 import { initPhoneInput } from './format-phone';
 
@@ -13,6 +13,8 @@ const validateForm = () => {
           validateNameInput(input);
         } else if (input.name === 'phone') {
           validatePhoneInput(input);
+        } else if (input.name === 'message') {
+          validateMessageInput(input);
         } else if (input.type === 'checkbox') {
           validateCheckInput(input);
         }

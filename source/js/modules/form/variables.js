@@ -1,6 +1,6 @@
 const formContentElement = document.querySelector('.form__wrapper');
 const formElement = formContentElement.querySelector('form');
-const itemsInputElement = formElement.querySelectorAll('input');
+const itemsInputElement = formElement.querySelectorAll('.form__valid');
 const phoneElement = formElement.querySelector('input[type="tel"]');
 
 const lettersOnlyRegex = /^[a-zA-Zа-яА-ЯёЁ\s]+$/;

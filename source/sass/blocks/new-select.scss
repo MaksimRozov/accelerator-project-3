@@ -104,13 +104,14 @@
   content: "";
   display: block;
   width: 16px;
-  height: 16px;
+  height: 9px;
   position: absolute;
   right: 21px;
   top: 50%;
-  background-image: url("../../__spritemap#sprite-arrow-select-down-view");
+  mask-image: url("../../__spritemap#sprite-arrow-select-down-view");
   background-position: right center;
   background-repeat: no-repeat;
+  background-color: $beige-color;
   background-size: 16px;
   opacity: 0.6;
   transition: all 0.27s ease-in-out;
@@ -118,5 +119,5 @@
 }
 
 .new-select.new-select--on::after {
-  background-image: url("../../__spritemap#sprite-arrow-select-top-view");
+  mask-image: url("../../__spritemap#sprite-arrow-select-top-view");
 }

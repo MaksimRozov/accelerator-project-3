@@ -1,0 +1,33 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $dark-overlay-color;
+  z-index: 3;
+  display: none;
+
+  &--open {
+    display: flex;
+  }
+}
+
+.modal__window {
+  width: 290px;
+  min-height: 531px;
+  position: relative;
+  margin: auto;
+}
+
+.modal__close {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  right: 23px;
+  top: 19px;
+  mask-image: url("../../__spritemap#sprite-menu-open-view");
+  background-repeat: no-repeat;
+  background-color: #316dc2;
+  cursor: pointer;
+}
