@@ -1201,6 +1201,7 @@
                     <input class="visually-hidden form__check-input form__valid" type="checkbox" name="personal">
                     <span class="form__check-custom"></span>
                     <span class="form__check-text">Я согласен на обработку моих персональных&nbsp;<br>данных</span>
+                    <div class="form__error-text"></div>
                   </label>
                 </div>
                 <button class="form__button button button--blue" type="submit">Отправить</button>
@@ -1285,17 +1286,17 @@
           <div class="form__wrapper">
             <form class="form__form-block" action="https://echo.htmlacademy.ru" method="post">
               <div class="form__item">
-                <input class="form__input form__input--main" type="text" id="name-modal" name="name-modal">
+                <input class="form__input form__input--main form__valid" type="text" id="name-modal" name="name-modal">
                 <label class="form__label" for="name-modal">Имя</label>
                 <div class="form__error-text"></div>
               </div>
               <div class="form__item">
-                <input class="form__input form__input--main" type="tel" maxlength="18" id="phone-modal" name="phone-modal">
+                <input class="form__input form__input--main form__valid" type="tel" maxlength="18" id="phone-modal" name="phone-modal">
                 <label class="form__label" for="phone-modal">Телефон</label>
                 <div class="form__error-text"></div>
               </div>
               <div class="form__item">
-                <select class="form__select" name="city" id="city-select-modal">
+                <select class="form__select form__valid" name="city" id="city-select-modal">
                   <option value="">&nbsp;</option>
                   <option value="Saint-Petersburg">Санкт-Петербург</option>
                   <option value="Saint-Petersburg">Санкт-Петербург</option>
@@ -1305,8 +1306,8 @@
               </div>
               <div class="form__item">
                 <label class="form__check-label">
-                  <input class="visually-hidden form__check-input" type="checkbox" name="personal">
-                  <span class="form__check-custom"></span>
+                  <input class="visually-hidden form__check-input form__valid" type="checkbox" name="personal">
+                  <span class="form__check-custom form__valid"></span>
                   <span class="form__check-text">Я согласен на обработку моих персональных данных</span>
                 </label>
               </div>

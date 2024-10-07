@@ -1,7 +1,13 @@
+import { validateForm } from '../form';
+
 const aboutButton = document.querySelector('.about__button');
 const modalElement = document.querySelector('.modal');
 const modalCloseElement = modalElement.querySelector('.modal__close');
 const modalWindowElement = modalElement.querySelector('.modal__window');
+const formContentElement = modalElement.querySelector('.form__wrapper');
+const formElement = modalElement.querySelector('form');
+const itemsInputElement = modalElement.querySelectorAll('.form__valid');
+const phoneElement = modalElement.querySelector('input[type="tel"]');
 
 
 const onCloseModal = () => {
@@ -28,6 +34,7 @@ const modalInit = () => {
   }
   aboutButton.addEventListener('click', onOpenModal);
   modalCloseElement.addEventListener('click', onCloseModal);
+  validateForm(phoneElement, formContentElement, formElement, itemsInputElement);
 };
 
 export { modalInit };

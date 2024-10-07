@@ -50,6 +50,16 @@ const validateCheckInput = (input) => {
   }
 };
 
+const validateSelectInput = (input) => {
+  const formSelect = document.querySelectorAll('.form__select');
+  const hasError = !input.value;
+
+  formSelect.forEach((element) => {
+    element.classList.toggle('input-error', hasError);
+  });
+};
+
+
 const validateMessageInput = (input) => {
   const value = input.value.trim();
   if (value === '') {
@@ -75,4 +85,4 @@ const resetError = () => {
   });
 };
 
-export { hideErrorMessage, validatePhoneInput, validateNameInput, resetError, validateCheckInput, validateMessageInput };
+export { hideErrorMessage, validatePhoneInput, validateNameInput, resetError, validateCheckInput, validateMessageInput, validateSelectInput };
